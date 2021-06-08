@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Глоссарий &#8212; QMLCourse</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Благодарности" href="acknowledgments.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">QMLCourse</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Приветствие
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Квантовые вычисления
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="qcblock/qcintro.html">
+   О блоке
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="qcblock/qubit.html">
+   Квантовый бит
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="qcblock/gates.html">
+   Квантовые гейты
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Фреймворки
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="progblock/progintro.html">
+   О блоке
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="progblock/pennylane.html">
+   PennyLane
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Вариационные схемы
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vqcblock/vqcintro.html">
+   О блоке
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vqcblock/vqc.html">
+   Вариационные квантовые схемы
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Квантовые градиенты
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="gradsblock/gradsintro.html">
+   О блоке
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gradsblock/gradients.html">
+   Градиенты квантовых схем
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  О курсе
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="authors.html">
+   Список авторов курса
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgments.html">
+   Благодарности
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Глоссарий
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/book/glossary.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="glossary">
+<span id="id1"></span><h1>Глоссарий<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
+<dl class="glossary simple">
+<dt id="term-0">Алгоритм Гровера<a class="headerlink" href="#term-0" title="Permalink to this term">¶</a></dt><dd><p>Англ. Grover’s algorithm</p>
+</dd>
+<dt id="term-1">Алгоритм квантового приближения для задачи оптимизации<a class="headerlink" href="#term-1" title="Permalink to this term">¶</a></dt><dd><p>(QAOA, quantum approximate optimization algorithm), <a class="reference external" href="https://www.osp.ru/os/2019/03/13055118">https://www.osp.ru/os/2019/03/13055118</a>, <a class="reference external" href="https://habr.com/ru/post/513474/">https://habr.com/ru/post/513474/</a></p>
+</dd>
+<dt id="term-2">Бра-вектор<a class="headerlink" href="#term-2" title="Permalink to this term">¶</a></dt><dd><p>Англ. bra-vector</p>
+</dd>
+<dt id="term-3">Вакуумное состояние <a class="headerlink" href="#term-3" title="Permalink to this term">¶</a></dt><dd><p>Англ. Vacuum state, также используется название “основное состояние” (basic state). Так часто называется
+квантовое состояние с вектором <span class="math notranslate nohighlight">\(\ket{0}\)</span>. Термин заимствован из квантовой оптики, чаще всего не имеет ничего
+общего с “обыденным” понятием “вакуума”.</p>
+</dd>
+<dt id="term-4">Вариационная квантовая схема<a class="headerlink" href="#term-4" title="Permalink to this term">¶</a></dt><dd><p>Англ. Variational Quantum Circuits (VQC)</p>
+</dd>
+<dt id="term-5">Вариационное машинное обучение<a class="headerlink" href="#term-5" title="Permalink to this term">¶</a></dt><dd><p>Англ. variational machine learning</p>
+</dd>
+<dt id="term-6">Гейты<a class="headerlink" href="#term-6" title="Permalink to this term">¶</a></dt><dd><p>Англ. Quantum gates</p>
+</dd>
+<dt id="term-7">Гейт Адамара<a class="headerlink" href="#term-7" title="Permalink to this term">¶</a></dt><dd><p>Англ. Hadamard gate</p>
+</dd>
+<dt id="term-C-NOT">Гейт C-NOT<a class="headerlink" href="#term-C-NOT" title="Permalink to this term">¶</a></dt><dt id="term-NOT">Гейт NOT<a class="headerlink" href="#term-NOT" title="Permalink to this term">¶</a></dt><dt id="term-T">T-гейт<a class="headerlink" href="#term-T" title="Permalink to this term">¶</a></dt><dt id="term-8">Гейты поворота<a class="headerlink" href="#term-8" title="Permalink to this term">¶</a></dt><dt id="term-Phase-shift">Phase-shift гейт<a class="headerlink" href="#term-Phase-shift" title="Permalink to this term">¶</a></dt><dt id="term-9">Единичный гейт<a class="headerlink" href="#term-9" title="Permalink to this term">¶</a></dt><dt id="term-iSWAP">Гейт iSWAP<a class="headerlink" href="#term-iSWAP" title="Permalink to this term">¶</a></dt><dt id="term-fSim">fSim<a class="headerlink" href="#term-fSim" title="Permalink to this term">¶</a></dt><dt id="term-10">Измерение<a class="headerlink" href="#term-10" title="Permalink to this term">¶</a></dt><dd><p>Англ. Quantum measurement</p>
+</dd>
+<dt id="term-11">Квантовая информация<a class="headerlink" href="#term-11" title="Permalink to this term">¶</a></dt><dd><p>Также используется термин “квантовая информатика”, англ. Quantum Information</p>
+</dd>
+<dt id="term-12">Квантовый оператор<a class="headerlink" href="#term-12" title="Permalink to this term">¶</a></dt><dd><p>Англ. Quantum operator</p>
+</dd>
+<dt id="term-13">Квантово-классическое обучение<a class="headerlink" href="#term-13" title="Permalink to this term">¶</a></dt><dd><p>Англ. Quantum-classical machine learning</p>
+</dd>
+<dt id="term-14">Квантовое состояние<a class="headerlink" href="#term-14" title="Permalink to this term">¶</a></dt><dd><p>Англ. Quantum state</p>
+</dd>
+<dt id="term-15">Кет-вектор<a class="headerlink" href="#term-15" title="Permalink to this term">¶</a></dt><dd><p>Англ. ket-vector</p>
+</dd>
+<dt id="term-16">Кот Шредингера<a class="headerlink" href="#term-16" title="Permalink to this term">¶</a></dt><dd><p>Англ. Schrödinger’s cat</p>
+</dd>
+<dt id="term-17"><a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D0%B1%D0%B8%D1%82">Кубит</a><a class="headerlink" href="#term-17" title="Permalink to this term">¶</a></dt><dd><p>Также кюбит или q-бит, англ. Qubit, от quantum bit. Минимальная единица информации на квантовом компьютере.
+Как и (классический) бит, кубит допускает два состояния, которые обычно обозначаются кет-векторами <span class="math notranslate nohighlight">\(\ket{0}\)</span> и <span class="math notranslate nohighlight">\(\ket{1}\)</span>,
+а на уровне реализации кубит – это двухуровневая квантовая система, такая как две поляризации фотона или спина электрона.</p>
+</dd>
+<dt id="term-18">Матрица плотности<a class="headerlink" href="#term-18" title="Permalink to this term">¶</a></dt><dd><p>Также используется термин “оператор плотности”, англ. Density matrix или Density operator</p>
+</dd>
+<dt id="term-19">Метод квантового локального подбора<a class="headerlink" href="#term-19" title="Permalink to this term">¶</a></dt><dd><p>(QLS, quantum local search), <a class="reference external" href="https://www.osp.ru/os/2019/03/13055118">https://www.osp.ru/os/2019/03/13055118</a></p>
+</dd>
+<dt id="term-20">Многокубитные гейты<a class="headerlink" href="#term-20" title="Permalink to this term">¶</a></dt><dd><p>Англ. Multiqubit gates</p>
+</dd>
+<dt id="term-21"><a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%91%D1%80%D0%B0_%D0%B8_%D0%BA%D0%B5%D1%82">Нотация Дирака</a><a class="headerlink" href="#term-21" title="Permalink to this term">¶</a></dt><dd><p>Англ. Dirac notation, формализм (система обозначения) для описания кантовых состояний на основе бра- и кет-векторов
+(англ. bra-ket от bracket, скобка). В этой системе обозначений <span class="math notranslate nohighlight">\(\ket{\Psi}\)</span> обозначает вектор состояния,
+<span class="math notranslate nohighlight">\(\bra{\Psi}\)</span> – сопряженный вектор состояния, а <span class="math notranslate nohighlight">\(\bra{\Psi} \hat{H} \ket{\Psi}\)</span> – среднее (математическое ожидаемое)
+значения наблюдаемой для оператора <span class="math notranslate nohighlight">\(\hat{H}\)</span> в состоянии <span class="math notranslate nohighlight">\(\ket{\Psi}\)</span> (также говорят о свертке оператора <span class="math notranslate nohighlight">\(\hat{H}\)</span> с
+бра-вектором <span class="math notranslate nohighlight">\(\bra{\Psi}\)</span> и кет-вектором <span class="math notranslate nohighlight">\(\ket{\Psi}\)</span>).
+Система обозначений Дирака позволяет отделить отделить вектора состояния <span class="math notranslate nohighlight">\(\ket{\Psi}\)</span> от самого состояния <span class="math notranslate nohighlight">\(\Psi\)</span> или
+конкретного математического описания (в виде волновой функции или вектора).</p>
+</dd>
+<dt id="term-22">Операторы Паули<a class="headerlink" href="#term-22" title="Permalink to this term">¶</a></dt><dd><p>Также используется термин “матрицы Паули”, англ. Pauli operators или Pauli matrices</p>
+</dd>
+<dt id="term-23">Правило сдвига параметров<a class="headerlink" href="#term-23" title="Permalink to this term">¶</a></dt><dd><p>(*) Англ. Parameter-shift rule</p>
+</dd>
+<dt id="term-24">Смешанные состояние<a class="headerlink" href="#term-24" title="Permalink to this term">¶</a></dt><dd><p>Англ. Mixed states</p>
+</dd>
+<dt id="term-Eigenvector">Собственный вектор (Eigenvector)<a class="headerlink" href="#term-Eigenvector" title="Permalink to this term">¶</a></dt><dd><p>Англ. Eigenvector</p>
+</dd>
+<dt id="term-25">Собственное значение<a class="headerlink" href="#term-25" title="Permalink to this term">¶</a></dt><dd><p>Англ. Eigenvalue</p>
+</dd>
+<dt id="term-26">Соотношение неопределенности<a class="headerlink" href="#term-26" title="Permalink to this term">¶</a></dt><dd><p>Также используется термин “принцип неопределенности”, англ. Uncertainty relation или Uncertainty principle</p>
+</dd>
+<dt id="term-27">Суперпозиция<a class="headerlink" href="#term-27" title="Permalink to this term">¶</a></dt><dd><p>Англ. Superposition</p>
+</dd>
+<dt id="term-28">Сфера Блоха<a class="headerlink" href="#term-28" title="Permalink to this term">¶</a></dt><dd><p>Англ. Bloch sphere</p>
+</dd>
+<dt id="term-29">Унитарный оператор<a class="headerlink" href="#term-29" title="Permalink to this term">¶</a></dt><dd><p>Англ. Unitary operator</p>
+</dd>
+<dt id="term-Noisy-intermediate-scale-quantum-NISQ-NISQ-Hardware">«Шумные» квантовые компьютеры промежуточного масштаба (Noisy intermediate-scale quantum, NISQ, NISQ Hardware)<a class="headerlink" href="#term-Noisy-intermediate-scale-quantum-NISQ-NISQ-Hardware" title="Permalink to this term">¶</a></dt><dd><p>Термин введен Прескиллом в работе <a class="reference external" href="https://arxiv.org/abs/1801.00862">https://arxiv.org/abs/1801.00862</a> для описания сегодняшнего состояния квантовых вычислений,
+когда “настоящие” квантовые вычисления (на миллионах кубит) еще невозможны, но совеменные квантовые компьютеры уже могут
+выполнять вычисления, которые невозможны на обычных, классических компьютерах.
+См. также краткое обсуждение в <a class="reference external" href="https://quantumcomputing.stackexchange.com/questions/1885/what-is-meant-by-noisy-intermediate-scale-quantum-nisq-technology">https://quantumcomputing.stackexchange.com/questions/1885/what-is-meant-by-noisy-intermediate-scale-quantum-nisq-technology</a>,
+и перевод на термина русский <a class="reference external" href="https://www.osp.ru/os/2019/03/13055130">https://www.osp.ru/os/2019/03/13055130</a></p>
+</dd>
+<dt id="term-30">Энтропия<a class="headerlink" href="#term-30" title="Permalink to this term">¶</a></dt><dd><p>Англ. Entropy</p>
+</dd>
+</dl>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./book"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="acknowledgments.html" title="previous page">Благодарности</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sinchenko SA et al.<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
