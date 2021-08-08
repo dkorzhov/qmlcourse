@@ -17,6 +17,7 @@ install-python-poetry-macOS:
 	python3 -V
 	brew install pipx
 	pipx install pipenv --python python3
+	pipx install poetry
 
 install-python-dependencies:
 	poetry install
