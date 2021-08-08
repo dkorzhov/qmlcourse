@@ -16,8 +16,7 @@ install-python-poetry-macOS:
 	ln -s -f /usr/local/bin/python3.8 /usr/local/bin/python3
 	python3 -V
 	brew install pipx
-	pipx install pipenv --python python3
-	pipx install poetry
+	pipx install poetry --python python3
 
 install-python-dependencies:
 	poetry install
