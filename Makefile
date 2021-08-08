@@ -1,4 +1,4 @@
-export PATH := $(HOME)/.poetry/bin:/miniconda3/bin:$(PATH)
+export PATH := $(HOME)/.poetry/bin:$(HOME)/miniconda3/bin:$(PATH)
 
 install-ubuntu-latest: install-python-poetry-ubuntu install-python-dependencies install-conda-ubuntu
 install-macOS-latest: install-python-poetry-macOS install-python-dependencies
@@ -14,8 +14,6 @@ install-conda-ubuntu:
 	wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 	chmod +x Miniconda3-latest-Linux-x86_64.sh
 	./Miniconda3-latest-Linux-x86_64.sh -b -u
-	export PATH=$(HOME)/.poetry/bin:/miniconda3/bin:$(PATH)
-	env
 	sudo conda install psi4=1.4rc3 python=3.8 -c psi4/label/dev -y
 
 install-python-poetry-macOS:
