@@ -14,7 +14,7 @@ install-python-poetry-macOS:
 	brew install curl python@3.8 -y
 	brew install python3-distutils python3-apt -y
 	curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
-	source ~/.poetry/env
+	/bin/bash -c "source ~/.poetry/env"
 
 install-python-dependencies:
 	poetry install
