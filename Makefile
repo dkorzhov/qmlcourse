@@ -23,8 +23,7 @@ install-python-poetry-macOS:
 
 install-python-dependencies:
 	poetry install
-	./Miniconda3-latest-Linux-x86_64.sh -b -u
-	conda install psi4=1.4rc3 python=3.8 -c psi4/label/dev -y
+	sudo conda install psi4=1.4rc3 python=3.8 -c psi4/label/dev -y
 
 build:
 	poetry run psi4 --test
