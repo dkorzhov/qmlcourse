@@ -13,6 +13,9 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
+      - name: Checkout branch for build
+        uses: actions/checkout@v2
+
       - name: Build the book
         run: |
           ls -la
