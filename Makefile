@@ -21,8 +21,8 @@ install-python-poetry-macOS:
 	ln -s -f /usr/local/bin/python3.8 /usr/local/bin/python3
 	python3 -V
 	pipx install poetry --python python3
-	pipx install condax --python python3
-	sudo condax install psi4=1.4rc3
+	pipx install conda --python python3
+	sudo conda install psi4=1.4rc3 python=3.8 -c psi4/label/dev -y
 
 install-python-dependencies:
 	poetry install
