@@ -13,7 +13,7 @@ install-python-poetry-ubuntu:
 	
 	wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 	chmod +x Miniconda3-latest-Linux-x86_64.sh
-	./Miniconda3-latest-Linux-x86_64.sh -b
+	./Miniconda3-latest-Linux-x86_64.sh -b -u
 
 install-python-poetry-macOS:
 	brew update
