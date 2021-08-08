@@ -13,7 +13,6 @@ install-python-poetry-ubuntu:
 	
 	wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 	chmod +x Miniconda3-latest-Linux-x86_64.sh
-	./Miniconda3-latest-Linux-x86_64.sh -b -u
 
 install-python-poetry-macOS:
 	brew update
@@ -23,7 +22,6 @@ install-python-poetry-macOS:
 
 install-python-dependencies:
 	poetry install
-	conda install psi4=1.4rc3 python=3.8 -c psi4/label/dev -y
 
 build:
 	poetry run psi4 --test
