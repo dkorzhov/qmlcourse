@@ -13,7 +13,7 @@ install-python-poetry-ubuntu:
 install-python-poetry-macOS:
 	brew update
 	brew uninstall --ignore-dependencies python3 pipx
-	brew install curl python@3.8
+	brew install curl python3@3.8
 	brew unlink python3
     brew link --force --overwrite python3@3.8
 	brew install pipx
