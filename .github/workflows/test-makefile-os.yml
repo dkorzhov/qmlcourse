@@ -18,4 +18,4 @@ jobs:
 
       - name: Build the book
         run: |
-          bash make install-${{ matrix.os }}
+          bash "make install-${{ matrix.os }}"
