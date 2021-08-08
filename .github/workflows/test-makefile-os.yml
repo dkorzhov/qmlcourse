@@ -1,0 +1,18 @@
+name: test-psi4-setup
+
+# Only run this when the master branch changes
+on:
+  workflow_dispatch:
+
+# This job installs dependencies, build the book, and pushes it to `gh-pages`
+jobs:
+  deploy-book:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+    steps:
+      - name: Build the book
+        run: |
+          make install-${{ matrix.os }}
