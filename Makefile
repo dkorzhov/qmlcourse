@@ -19,10 +19,9 @@ install-python-poetry-macOS:
 	brew install pipx
 	pipx ensurepath
 	pipx --version
-	pipx install poetry
+	python3 -m pipx install poetry
 
 install-python-dependencies:
-	poetry env use python3
 	poetry install
 
 build:
