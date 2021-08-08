@@ -13,7 +13,6 @@ install-python-poetry-ubuntu:
 install-python-poetry-macOS:
 	brew update
 	brew install curl python@3.8
-	brew install python3-distutils python3-apt
 	curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
 
 install-python-dependencies:
