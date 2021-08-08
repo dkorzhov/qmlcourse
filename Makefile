@@ -22,6 +22,7 @@ install-python-poetry-macOS:
 	pipx install poetry
 
 install-python-dependencies:
+	poetry env use python3.8
 	poetry install
 
 build:
