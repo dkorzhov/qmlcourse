@@ -1,4 +1,4 @@
-name: test-psi4-setup
+name: test-makefile-os
 
 # Only run this when the master branch changes
 on:
