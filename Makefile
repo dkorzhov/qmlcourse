@@ -12,7 +12,7 @@ install-python-poetry-ubuntu:
 
 install-python-poetry-macOS:
 	brew update
-	brew switch python@3.8
+	ln -s -f /usr/local/bin/python3.8 /usr/local/bin/python3
 	python3 -V
 	pipx install poetry
 
