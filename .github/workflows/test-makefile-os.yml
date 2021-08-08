@@ -7,10 +7,7 @@ on:
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
-    runs-on: ${{ matrix.os }}
-    defaults:
-      run:
-        shell: bash    
+    runs-on: ${{ matrix.os }} 
     strategy:
       fail-fast: false
       matrix:
@@ -20,5 +17,5 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build the book
-        run: |
-          make install-${{ matrix.os }}
+        run: make install-${{ matrix.os }}
+        shell: bash
