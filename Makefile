@@ -14,6 +14,7 @@ install-conda-ubuntu:
 	wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 	chmod +x Miniconda3-latest-Linux-x86_64.sh
 	./Miniconda3-latest-Linux-x86_64.sh -b -u
+	export PATH := $(HOME)/.poetry/bin:/miniconda3/bin:$(PATH)
 	sudo conda install psi4=1.4rc3 python=3.8 -c psi4/label/dev -y
 
 install-python-poetry-macOS:
