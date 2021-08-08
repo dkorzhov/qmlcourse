@@ -18,5 +18,4 @@ jobs:
 
       - name: Build the book
         run: |
-          ls -la
           make install-${{ matrix.os }}
