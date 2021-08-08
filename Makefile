@@ -1,5 +1,5 @@
 export PATH := $(HOME)/.poetry/bin:$(PATH)
-export PATH := ~/miniconda/bin:$(PATH)
+export PATH := $(HOME)/miniconda3/bin:$(PATH)
 
 install-ubuntu-latest: install-python-poetry-ubuntu install-python-dependencies
 install-macOS-latest: install-python-poetry-macOS install-python-dependencies
