@@ -8,6 +8,7 @@ install-python-poetry-ubuntu:
 	sudo apt install python3-distutils python3-apt -y
 	curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
 	PATH="${HOME}/.poetry/bin:${PATH}"
+	echo "PATH=${PATH}:${HOME}/.poetry/bin" >> ~/.bashrc
 
 install-python-poetry-macOS:
 	brew update
