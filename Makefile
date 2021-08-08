@@ -28,5 +28,6 @@ install-python-dependencies:
 	poetry install
 
 build:
+	env
 	poetry run psi4 --test
 	poetry run jupyter-book build ./qmlcourseRU
