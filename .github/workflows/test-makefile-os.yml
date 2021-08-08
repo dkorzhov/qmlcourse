@@ -8,6 +8,9 @@ on:
 jobs:
   deploy-book:
     runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash    
     strategy:
       fail-fast: false
       matrix:
@@ -19,4 +22,3 @@ jobs:
       - name: Build the book
         run: |
           make install-${{ matrix.os }}
-        shell: bash
