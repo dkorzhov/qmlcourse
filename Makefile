@@ -15,11 +15,8 @@ install-python-poetry-macOS:
 	brew uninstall --ignore-dependencies pipx
 	ln -s -f /usr/local/bin/python3.8 /usr/local/bin/python3
 	python3 -V
-	env
 	brew install pipx
-	pipx ensurepath
-	pipx --version
-	python3 -m pipx install poetry
+	pipx install pipenv --python python3
 
 install-python-dependencies:
 	poetry install
