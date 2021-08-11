@@ -18,8 +18,8 @@ install-python-poetry-macOS:
 	pipx install poetry --python python3
 
 install-psi4:
-	curl "http://vergil.chemistry.gatech.edu/psicode-download/$(PSI4_VER)" -o $(PSI4_VER) --keepalive-time 2
-	bash $(PSI4_VER) -b -p $(HOME)/psi4conda
+	curl "http://vergil.chemistry.gatech.edu/psicode-download/Psi4conda-1.4rc3-py38-Linux-x86_64.sh" -o Psi4conda-1.4rc3-py38-Linux-x86_64.sh --keepalive-time 2
+	bash Psi4conda-1.4rc3-py38-Linux-x86_64.sh-b -p $(HOME)/psi4conda
 	bash . $(HOME)/psi4conda/etc/profile.d/conda.sh
 	bash conda activate
 
