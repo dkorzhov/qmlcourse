@@ -1,6 +1,6 @@
 export PATH := $(HOME)/.poetry/bin:$(PATH)
 
-install-ubuntu-latest: install-python-poetry-ubuntu install-python-dependencies install-conda-ubuntu
+install-ubuntu-latest: install-python-poetry-ubuntu  install-psi4 install-python-dependencies
 install-macOS-latest: install-python-poetry-macOS install-python-dependencies
 
 install-python-poetry-ubuntu:
@@ -9,20 +9,17 @@ install-python-poetry-ubuntu:
 	sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
 	sudo apt install python3-distutils python3-apt python3-h5py -y
 	curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
-
-install-conda-ubuntu:
-	wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-	chmod +x Miniconda3-latest-Linux-x86_64.sh
-	./Miniconda3-latest-Linux-x86_64.sh -b -u
-	sudo $(HOME)/miniconda3/bin/conda install psi4=1.4rc3 python=3.8 -c psi4/label/dev -y
-
+	
 install-python-poetry-macOS:
 	brew update
 	ln -s -f /usr/local/bin/python3.8 /usr/local/bin/python3
 	python3 -V
 	pipx install poetry --python python3
-	pipx install condax --python python3
-	sudo conda install psi4=1.4rc3 python=3.8 -c psi4/label/dev -y
+
+install-psi4:
+	curl "http://vergil.chemistry.gatech.edu/psicode-download/Psi4conda-1.4rc3-py38-Linux-x86_64.sh" -o Psi4conda-1.4rc3-py38-Linux-x86_64.sh --keepalive-time 2
+	bash Psi4conda-1.4rc3-py38-Linux-x86_64.sh -b -p $(HOME)/psi4conda
+	conda activate
 
 install-python-dependencies:
 	poetry install
