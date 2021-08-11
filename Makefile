@@ -20,7 +20,7 @@ install-psi4:
 	curl "http://vergil.chemistry.gatech.edu/psicode-download/Psi4conda-1.4rc3-py38-Linux-x86_64.sh" -o Psi4conda-1.4rc3-py38-Linux-x86_64.sh --keepalive-time 2
 	bash Psi4conda-1.4rc3-py38-Linux-x86_64.sh -b -p $(HOME)/psi4conda
 	bash $(HOME)/psi4conda/etc/profile.d/conda.sh
-	bash conda activate
+	bash conda activate --entrypoint /usr/bin/python3
 
 install-python-dependencies:
 	poetry install
