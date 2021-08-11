@@ -8,8 +8,7 @@ install-python-poetry-ubuntu:
 	sudo apt install curl wget python3.8 -y
 	sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
 	sudo apt install python3-distutils -y
-	curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
-	PSI4_VER=$$(Psi4conda-1.4rc3-py38-Linux-x86_64.sh)
+	curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 
 	
 install-python-poetry-macOS:
 	brew update
