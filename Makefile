@@ -19,12 +19,12 @@ install-python-poetry-macOS:
 install-psi4:
 	curl "http://vergil.chemistry.gatech.edu/psicode-download/Psi4conda-1.4rc3-py38-Linux-x86_64.sh" -o Psi4conda-1.4rc3-py38-Linux-x86_64.sh --keepalive-time 2
 	bash Psi4conda-1.4rc3-py38-Linux-x86_64.sh -b -u -p $(HOME)/psi4conda
-	. $(HOME)/psi4conda/etc/profile.d/conda.sh
-	$(HOME)/psi4conda/bin/conda activate
+	echo '. $(HOME)/psi4conda/etc/profile.d/conda.sh' >> ~/.bashrc
+	echo '$(HOME)/psi4conda/bin/conda activate' >> ~/.bashrc
 
 install-python-dependencies:
 	poetry install
 
 build:
-	poetry run psi4 --test
+	bash poetry run psi4 --test
 	poetry run jupyter-book build ./qmlcourseRU
