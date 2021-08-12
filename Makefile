@@ -25,7 +25,7 @@ install-psi4:
 	# echo '. $(HOME)/psi4conda/etc/profile.d/conda.sh' >> ~/.bashrc
 	# echo '$(HOME)/psi4conda/bin/conda activate' >> ~/.bashrc
 	echo $$0
-	. $(HOME)/psi4conda/etc/profile.d/conda.sh
+	source $(HOME)/psi4conda/etc/profile.d/conda.sh
 	$(HOME)/psi4conda/bin/conda activate $(HOME)/psi4conda/
 install-python-dependencies:
 	poetry install
