@@ -4,7 +4,7 @@ SHELL = /bin/bash
 export PATH := $(HOME)/.poetry/bin:$(PATH)
 
 install-ubuntu-latest: install-python-poetry-ubuntu  install-psi4 install-python-dependencies
-install-macOS-latest: install-python-poetry-macOS install-python-dependencies
+install-macOS-latest: install-python-poetry-macOS install-psi4 install-python-dependencies
 
 install-python-poetry-ubuntu:
 	sudo apt update
