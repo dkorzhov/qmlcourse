@@ -21,9 +21,10 @@ install-psi4:
 	# bash Psi4conda-1.4rc3-py38-Linux-x86_64.sh -b -u -p $(HOME)/psi4conda
 	# echo '. $(HOME)/psi4conda/etc/profile.d/conda.sh' >> ~/.bashrc
 	# echo '$(HOME)/psi4conda/bin/conda activate' >> ~/.bashrc
-	. $(HOME)/psi4conda/etc/profile.d/conda.sh
-	$(HOME)/psi4conda/bin/conda init bash
-	$(HOME)/psi4conda/bin/conda activate
+	# . $(HOME)/psi4conda/etc/profile.d/conda.sh
+	# $(HOME)/psi4conda/bin/conda init bash
+	# $(HOME)/psi4conda/bin/conda activate
+	bash
 install-python-dependencies:
 	poetry install
 
