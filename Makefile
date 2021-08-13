@@ -38,6 +38,6 @@ build:
 
 test:
 	$$(pwd)
-	OLDPWD = $(pwd)
+	OLDPWD = $$(pwd)
 	echo $(OLDPWD)
 	ls $(OLDPWD)
