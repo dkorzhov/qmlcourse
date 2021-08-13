@@ -37,7 +37,6 @@ build:
 	poetry run jupyter-book build ./qmlcourseRU
 
 test:
-	$$(pwd)
-	export OLDPWD=$$(pwd)
+	OLDPWD=$(shell pwd)
 	echo $(OLDPWD)
 	ls $(OLDPWD)
