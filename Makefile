@@ -41,4 +41,5 @@ build-main:
 
 test:
 	OLDPWD=$(shell pwd)
-	ls $$OLDPWD
+	echo $$OLDPWD
+	ls -la $$OLDPWD
