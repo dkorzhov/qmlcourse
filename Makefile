@@ -38,4 +38,7 @@ test:
 	ln -s -f /usr/local/bin/python3.8 /usr/local/bin/python3
 	# curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 
 	brew install poetry
-	poetry
+	curl "http://vergil.chemistry.gatech.edu/psicode-download/Psi4conda-1.4rc3-py38-MacOSX-x86_64.sh" -o Psi4conda-1.4rc3-py38.sh --keepalive-time 2
+	bash Psi4conda-1.4rc3-py38.sh -b -u -p $(HOME)/psi4conda
+	poetry install
+	poetry run psi4 --test
