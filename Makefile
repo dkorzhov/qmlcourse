@@ -18,8 +18,7 @@ install-python-poetry-ubuntu:
 install-python-poetry-macOS:
 	brew update
 	ln -s -f /usr/local/bin/python3.8 /usr/local/bin/python3
-	python3 -V
-	pipx install poetry --python python3
+	curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 
 
 	curl "http://vergil.chemistry.gatech.edu/psicode-download/Psi4conda-1.4rc3-py38-MacOSX-x86_64.sh" -o Psi4conda-1.4rc3-py38.sh --keepalive-time 2
 
