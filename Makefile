@@ -42,4 +42,5 @@ build-main:
 test:
 	export OLDPWD=$(shell pwd)
 	echo $$OLDPWD
+	$(shell cd -)
 	ls -la $$OLDPWD
