@@ -24,4 +24,4 @@ jobs:
 
       - name: Build the book
         run: |
-          make prepare-build
+          make test
