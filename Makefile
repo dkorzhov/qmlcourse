@@ -38,3 +38,7 @@ prepare-build:
 build-main:
 	poetry run psi4 --test
 	poetry run jupyter-book build ./qmlcourseRU
+
+test:
+	OLDPWD=$(shell pwd)
+	ls $$OLDPWD
