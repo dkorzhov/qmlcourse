@@ -31,8 +31,7 @@ install-python-dependencies:
 	poetry install
 
 prepare-build:
-	cd $(HOME)/psi4conda/etc/profile.d/ && source conda.sh && conda activate
-	$(shell cd -)
+	cd $(HOME)/psi4conda/etc/profile.d/ && source conda.sh && conda activate && cd -
 
 build-main:
 	poetry run psi4 --test
