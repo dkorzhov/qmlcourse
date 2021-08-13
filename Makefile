@@ -38,5 +38,5 @@ build:
 
 test:
 	OLDPWD=$(shell pwd)
-	echo $(OLDPWD)
-	ls $(OLDPWD)
+	echo ${OLDPWD}
+	ls ${OLDPWD}
