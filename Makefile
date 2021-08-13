@@ -5,6 +5,7 @@ export PATH := $(HOME)/.poetry/bin:$(PATH)
 
 install-ubuntu-latest: test install-python-poetry-ubuntu  install-psi4 install-python-dependencies
 install-macOS-latest: test install-python-poetry-macOS install-psi4 install-python-dependencies
+build: prepare-build build-main
 
 install-python-poetry-ubuntu:
 	sudo apt update
@@ -29,14 +30,11 @@ install-psi4:
 install-python-dependencies:
 	poetry install
 
-build:
-	OLDPWD=$$(pwd)
+prepare-build:
+	OLDPWD=$(shell pwd)
 	cd $(HOME)/psi4conda/etc/profile.d/ && source conda.sh && conda activate
-	cd OLDPWD
+	cd $$OLDPWD
+
+build-main:
 	poetry run psi4 --test
 	poetry run jupyter-book build ./qmlcourseRU
-
-test:
-	OLDPWD=$(shell pwd)
-	echo $$OLDPWD
-	ls $$OLDPWD
