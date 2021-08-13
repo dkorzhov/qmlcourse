@@ -32,3 +32,10 @@ build:
 	cd $(HOME)/psi4conda/etc/profile.d/ && source conda.sh && conda activate && cd -
 	poetry run psi4 --test
 	poetry run jupyter-book build ./qmlcourseRU
+
+
+test:
+	ln -s -f /usr/local/bin/python3.8 /usr/local/bin/python3
+	curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 
+	env
+	ls -la ~/.poetry
