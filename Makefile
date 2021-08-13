@@ -38,4 +38,5 @@ test:
 	ln -s -f /usr/local/bin/python3.8 /usr/local/bin/python3
 	curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 
 	env
-	ls -la ~/.poetry
+	ls -la ~/.poetry/bin
+	poetry
