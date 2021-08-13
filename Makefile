@@ -31,17 +31,9 @@ install-python-dependencies:
 	poetry install
 
 prepare-build:
-	OLDPWD=$(shell pwd)
 	cd $(HOME)/psi4conda/etc/profile.d/ && source conda.sh && conda activate
-	cd $$OLDPWD
+	$(shell cd -)
 
 build-main:
 	poetry run psi4 --test
 	poetry run jupyter-book build ./qmlcourseRU
-
-test:
-	export OLDPWD=$(shell pwd)
-	echo $$OLDPWD
-	cd ..
-	$(shell cd -)
-	ls -la $$OLDPWD
