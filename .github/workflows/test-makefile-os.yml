@@ -19,9 +19,9 @@ jobs:
       - name: Checkout branch for build
         uses: actions/checkout@v2
 
-      # - name: Install dependencies
-      #   run: make install-${{ matrix.os }}
+      - name: Install dependencies
+        run: make install-${{ matrix.os }}
 
       - name: Build the book
         run: |
-          make test
+          make build
