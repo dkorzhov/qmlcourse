@@ -40,5 +40,5 @@ test:
 	curl "http://vergil.chemistry.gatech.edu/psicode-download/Psi4conda-1.4rc3-py38-MacOSX-x86_64.sh" -o Psi4conda-1.4rc3-py38.sh --keepalive-time 2
 	bash Psi4conda-1.4rc3-py38.sh -b -u -p $(HOME)/psi4conda
 	$(HOME)/.poetry/bin/poetry install
-	cd $(HOME)/psi4conda/etc/profile.d/ && source conda.sh && conda activate && cd -
-	$(HOME)/.poetry/bin/poetry run psi4 --test
+	$(shell cd $(HOME)/psi4conda/etc/profile.d/ && source conda.sh && conda activate && cd - && $(HOME)/.poetry/bin/poetry run psi4 --test)
+	
