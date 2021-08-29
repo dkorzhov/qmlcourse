@@ -26,7 +26,9 @@ install-python-poetry-macOS:
 install-python-poetry-windows:
 	choco install -y python3 
 
-	pwsh -noprofile -command Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -OutFile "c:/temp/get-poetry.py | python3 -
+	pwsh -noprofile -command [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+	pwsh -noprofile -command Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -OutFile "c:/temp/get-poetry.py" | python3 -
+	poetry --version
 
 install-psi4:
 	bash Psi4conda-1.4rc3-py38.sh -b -u -p $(HOME)/psi4conda
