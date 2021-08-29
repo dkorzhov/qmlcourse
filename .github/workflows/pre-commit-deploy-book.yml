@@ -3,6 +3,11 @@ name: pre-commit-deploy-book
 # Only run this when the master branch changes
 on:
   workflow_dispatch:
+    inputs:
+      UseCache:
+        description: 'Use cache'     
+        required: false
+        default: true
   pull_request:
 
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
@@ -21,9 +26,10 @@ jobs:
           ref: "gh-pages"
           path: ./gh-pages
 
-      # - name: Copy cache for build book
-      #   run: |
-      #     cp -r ./gh-pages/_build/ ./qmlcourseRU/ || exit 0
+      - name: Copy cache for build book
+        if: ${{ UseCache }}
+        run: |
+          cp -r ./gh-pages/_build/ ./qmlcourseRU/ || exit 0
 
       # Install dependencies
       - name: Set up Python 3.8
