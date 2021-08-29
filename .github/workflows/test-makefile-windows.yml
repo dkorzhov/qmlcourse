@@ -1,0 +1,19 @@
+name: test-makefile-os-windows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-book:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: pwsh    
+    steps:
+      - name: Checkout branch for build
+        uses: actions/checkout@v2
+
+      - name: Install chocolatey
+        run: |
+          Set-ExecutionPolicy Bypass -Scope Process -Force;
+          .\ChocolateyInstallNonAdmin.ps1
