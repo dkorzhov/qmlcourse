@@ -7,7 +7,7 @@ on:
       DisableCache:
         description: 'Disable cache'     
         required: false
-        default: false
+        default: 'false'
   pull_request:
 
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
@@ -27,7 +27,7 @@ jobs:
           path: ./gh-pages
 
       - name: Copy cache for build book
-        if: ${{ github.event.inputs.DisableCache != true }}
+        if: ${{ github.event.inputs.DisableCache != 'true' }}
         run: |
           cp -r ./gh-pages/_build/ ./qmlcourseRU/ || exit 0
 
