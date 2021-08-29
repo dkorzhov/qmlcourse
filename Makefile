@@ -24,8 +24,8 @@ install-python-poetry-macOS:
 	curl "http://vergil.chemistry.gatech.edu/psicode-download/Psi4conda-1.4rc3-py38-MacOSX-x86_64.sh" -o Psi4conda-1.4rc3-py38.sh --keepalive-time 2
 
 install-python-poetry-windows:
-	choco install -y python3
-	
+	choco install -y python3 --version=3.8.5
+
 install-psi4:
 	bash Psi4conda-1.4rc3-py38.sh -b -u -p $(HOME)/psi4conda
 
