@@ -27,7 +27,7 @@ jobs:
           path: ./gh-pages
 
       - name: Copy cache for build book
-        if: ${{ github.event.inputs.DisableCache != true}}
+        if: ${{ github.event.inputs.DisableCache != true }}
         run: |
           cp -r ./gh-pages/_build/ ./qmlcourseRU/ || exit 0
 
@@ -58,7 +58,6 @@ jobs:
 
       - name: Build the book
         run: |
-          env
           poetry run jupyter-book build ./qmlcourseRU
 
       # Push the book's HTML to github-pages
