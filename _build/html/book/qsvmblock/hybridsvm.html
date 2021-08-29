@@ -666,12 +666,6 @@ K(x, y) = e^{-\frac{||x - y||^2}{\sigma}}
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2021-08-29 10:16:07.392355: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library &#39;libcudart.so.11.0&#39;; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.11/x64/lib
-2021-08-29 10:16:07.392385: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
-</pre></div>
-</div>
-</div>
 </div>
 <p>Помимо всех привычных, нам еще потребуется классический SVM из <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>:</p>
 <div class="cell docutils container">
@@ -783,8 +777,8 @@ K(x, y) = e^{-\frac{||x - y||^2}{\sigma}}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 0: ──H──Rϕ(0.161)───H──╭C────────────╭C──╭C────────────────╭C────H⁻¹──Rϕ(-0.506)⁻¹──H⁻¹──╭┤ Probs 
- 1: ──H──Rϕ(-0.955)──H──╰X──Rϕ(1.79)──╰X──╰X⁻¹──Rϕ(1.59)⁻¹──╰X⁻¹──H⁻¹──Rϕ(0.955)⁻¹───H⁻¹──╰┤ Probs 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 0: ──H──Rϕ(-1)──────H──╭C───────────╭C──╭C────────────────╭C────H⁻¹──Rϕ(0.333)⁻¹───H⁻¹──╭┤ Probs 
+ 1: ──H──Rϕ(-0.333)──H──╰X──Rϕ(1.6)──╰X──╰X⁻¹──Rϕ(2.81)⁻¹──╰X⁻¹──H⁻¹──Rϕ(-0.333)⁻¹──H⁻¹──╰┤ Probs 
 </pre></div>
 </div>
 </div>
