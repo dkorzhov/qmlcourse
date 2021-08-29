@@ -4,10 +4,10 @@ name: pre-commit-deploy-book
 on:
   workflow_dispatch:
     inputs:
-      UseCache:
-        description: 'Use cache'     
+      DisableCache:
+        description: 'Disable cache'     
         required: false
-        default: true
+        default: false
   pull_request:
 
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
@@ -27,7 +27,7 @@ jobs:
           path: ./gh-pages
 
       - name: Copy cache for build book
-        if: ${{ UseCache }}
+        if: ${{ github.event.inputs.DisableCache != true}}
         run: |
           cp -r ./gh-pages/_build/ ./qmlcourseRU/ || exit 0
 
