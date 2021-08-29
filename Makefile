@@ -25,8 +25,6 @@ install-python-poetry-macOS:
 
 install-python-poetry-windows:
 	choco install python --version=3.8
-	
-	(Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python3 -
 
 install-psi4:
 	bash Psi4conda-1.4rc3-py38.sh -b -u -p $(HOME)/psi4conda
