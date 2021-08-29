@@ -1,5 +1,5 @@
-# .ONESHELL:
-# SHELL = /bin/bash
+.ONESHELL:
+SHELL = /bin/bash
 
 export PATH := $(HOME)/.poetry/bin:$(PATH)
 
@@ -24,10 +24,10 @@ install-python-poetry-macOS:
 	curl "http://vergil.chemistry.gatech.edu/psicode-download/Psi4conda-1.4rc3-py38-MacOSX-x86_64.sh" -o Psi4conda-1.4rc3-py38.sh --keepalive-time 2
 
 install-python-poetry-windows:
-	choco install -y python3
+	choco install -y python3 
 
-	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-	(Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python3 -
+	pwsh -noprofile -command Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -OutFile "c:/temp/get-poetry.py | python3 -
+	poetry
 
 install-psi4:
 	bash Psi4conda-1.4rc3-py38.sh -b -u -p $(HOME)/psi4conda
