@@ -25,8 +25,8 @@ install-python-poetry-macOS:
 
 install-python-poetry-windows:
 	choco install curl 
-	choco install python --version=3.8.0
-	choco install poetry
+	choco install python --version=3.8
+	choco install python-poetry
 
 install-psi4:
 	bash Psi4conda-1.4rc3-py38.sh -b -u -p $(HOME)/psi4conda
