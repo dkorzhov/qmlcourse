@@ -9,6 +9,8 @@ on:
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
+    env:
+      TF_CPP_MIN_LOG_LEVEL: 3
     steps:
       - name: Checkout branch for build
         uses: actions/checkout@v2
@@ -19,9 +21,9 @@ jobs:
           ref: "gh-pages"
           path: ./gh-pages
 
-      - name: Copy cache for build book
-        run: |
-          cp -r ./gh-pages/_build/ ./qmlcourseRU/ || exit 0
+      # - name: Copy cache for build book
+      #   run: |
+      #     cp -r ./gh-pages/_build/ ./qmlcourseRU/ || exit 0
 
       # Install dependencies
       - name: Set up Python 3.8
@@ -50,6 +52,7 @@ jobs:
 
       - name: Build the book
         run: |
+          env
           poetry run jupyter-book build ./qmlcourseRU
 
       # Push the book's HTML to github-pages
