@@ -1,6 +1,5 @@
 name: pre-commit-deploy-book
 
-# Only run this when the master branch changes
 on:
   workflow_dispatch:
     inputs:
