@@ -5,6 +5,7 @@ export PATH := $(HOME)/.poetry/bin:$(PATH)
 
 install-ubuntu-latest: install-python-poetry-ubuntu  install-psi4 install-python-dependencies
 install-macOS-latest: install-python-poetry-macOS install-psi4 install-python-dependencies
+install-windows: install-python-poetry-windows
 
 install-python-poetry-ubuntu:
 	sudo apt update
@@ -21,6 +22,9 @@ install-python-poetry-macOS:
 	brew install poetry
 
 	curl "http://vergil.chemistry.gatech.edu/psicode-download/Psi4conda-1.4rc3-py38-MacOSX-x86_64.sh" -o Psi4conda-1.4rc3-py38.sh --keepalive-time 2
+
+install-python-poetry-windows:
+	choco install curl python3.8
 
 install-psi4:
 	bash Psi4conda-1.4rc3-py38.sh -b -u -p $(HOME)/psi4conda

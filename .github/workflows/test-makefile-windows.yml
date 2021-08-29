@@ -21,3 +21,6 @@ jobs:
       - name: Install make
         run: |
           choco install make
+
+      - name: Install dependencies
+        run: make install-windows         
