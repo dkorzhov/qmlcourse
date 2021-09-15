@@ -1,5 +1,5 @@
 .ONESHELL:
-SHELL = /bin/bash
+SHELL = /bin/bash echo
 
 export PATH := $(HOME)/.poetry/bin:$(PATH)
 
