@@ -1,6 +1,4 @@
 - file: book/index
-- defaults:
-    numbered: true
 
 - part: Введение
   chapters:
