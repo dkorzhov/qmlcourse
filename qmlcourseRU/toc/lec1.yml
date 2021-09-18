@@ -1,6 +1,5 @@
-root: book/empty
+- file: book/index
 
-parts:
 - part: Введение
   chapters:
     - file: book/intro1block/intro1.md
