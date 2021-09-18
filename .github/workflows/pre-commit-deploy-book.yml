@@ -83,7 +83,21 @@ jobs:
       - name: Delete pdf file
         if: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
-          rm ./qmlcourseRU/_build/pdf/book.pdf  
+          rm ./qmlcourseRU/_build/pdf/book.pdf
+
+      - name: Use toc1.yaml
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          jupyter-book toc migrate ./qmlcourseRU/toc/_toc1.yml -o ./qmlcourseRU/_toc.yml
+          poetry run jupyter-book build ./qmlcourseRU --builder pdfhtml
+          mv ./qmlcourseRU/_build/pdf/book.pdf ./qmlcourseRU/_build/pdf/toc1.pdf
+
+      - name: Use toc2.yaml
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          jupyter-book toc migrate ./qmlcourseRU/toc/_toc2.yml -o ./qmlcourseRU/_toc.yml
+          poetry run jupyter-book build ./qmlcourseRU --builder pdfhtml
+          mv ./qmlcourseRU/_build/pdf/book.pdf ./qmlcourseRU/_build/pdf/toc2.pdf                     
 
       # Push the book's HTML to github-pages
       - name: GitHub Pages action
