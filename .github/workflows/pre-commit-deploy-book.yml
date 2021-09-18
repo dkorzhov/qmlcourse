@@ -69,11 +69,11 @@ jobs:
         run: |
           poetry run jupyter-book build ./qmlcourseRU
 
-      - name: Build PDF file
-        if: ${{ github.event_name == 'workflow_dispatch' }}
-        run: |
-          poetry run jupyter-book build ./qmlcourseRU --builder pdfhtml
-          mv ./qmlcourseRU/_build/pdf/book.pdf ./qmlcourseRU/_build/pdf/all_book.pdf
+      # - name: Build PDF file
+      #   if: ${{ github.event_name == 'workflow_dispatch' }}
+      #   run: |
+      #     poetry run jupyter-book build ./qmlcourseRU --builder pdfhtml
+      #     mv ./qmlcourseRU/_build/pdf/book.pdf ./qmlcourseRU/_build/pdf/all_book.pdf
 
       - name: Use toc.yaml files for PDF
         if: ${{ github.event_name == 'workflow_dispatch' }}
