@@ -77,7 +77,7 @@ jobs:
       - name: html to pdf
         uses: fifsky/html-to-pdf-action@master
         with:
-          htmlFile: ./qmlcourseRU/_build/html/book/gradsblock/
+          htmlFile: ./qmlcourseRU/_build/html/book/gradsblock/*.html
           outputFile: ./qmlcourseRU/_build/pdf/gradsblock.pdf   
 
       # Push the book's HTML to github-pages
