@@ -1,3 +1,5 @@
+- file: book/
+
 - part: Основы Python
   chapters:
     - file: book/pythonblock/pythonintro.md

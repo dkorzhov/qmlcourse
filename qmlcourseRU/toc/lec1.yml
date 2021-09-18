@@ -1,3 +1,5 @@
+- file: book/
+
 - part: Введение
   chapters:
     - file: book/intro1block/intro1.md
