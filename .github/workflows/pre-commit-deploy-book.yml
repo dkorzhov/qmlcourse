@@ -75,11 +75,13 @@ jobs:
           poetry run jupyter-book build ./qmlcourseRU --builder pdfhtml
 
       - uses: actions/upload-artifact@v2
+        if: ${{ github.event_name == 'workflow_dispatch' }}
         with:
           name: bookPDF
           path: ./qmlcourseRU/_build/pdf/book.pdf
 
       - name: Delete pdf file
+        if: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
           rm ./qmlcourseRU/_build/pdf/book.pdf  
 
