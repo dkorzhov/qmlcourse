@@ -1,5 +1,5 @@
 - file: book/index
-- options:
+- defaults:
     numbered: true
 
 - part: Введение
