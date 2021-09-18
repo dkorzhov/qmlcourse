@@ -76,8 +76,8 @@ jobs:
 
       - uses: markwilson/html2pdf@v1.0
         with:
-          htmlPath: './qmlcourseRU/qmlcourse/_build/html/book/gradsblock/'
-          pdfName: './qmlcourseRU/qmlcourse/_build/pdf/gradsblock'          
+          htmlPath: './qmlcourseRU/_build/html/book/gradsblock/'
+          pdfName: './qmlcourseRU/_build/pdf/gradsblock'          
 
       # Push the book's HTML to github-pages
       - name: GitHub Pages action
