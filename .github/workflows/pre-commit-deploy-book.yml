@@ -85,12 +85,16 @@ jobs:
         run: |
           rm ./qmlcourseRU/_build/pdf/book.pdf
 
-      - name: Use toc1.yaml
+      - name: Use toc.yaml files
         if: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
-          cp ./qmlcourseRU/toc/_toc1.yml ./qmlcourseRU/_toc.yml
-          poetry run jupyter-book build ./qmlcourseRU --builder pdfhtml
-          mv ./qmlcourseRU/_build/pdf/book.pdf ./qmlcourseRU/_build/pdf/toc1.pdf
+          for file in "./qmlcourseRU/toc"/*
+          do
+            echo "$file"
+            cp ./qmlcourseRU/toc/$file ./qmlcourseRU/_toc.yml
+            poetry run jupyter-book build ./qmlcourseRU --builder pdfhtml
+            mv ./qmlcourseRU/_build/pdf/book.pdf ./qmlcourseRU/_build/pdf/$file.pdf
+          done
 
       - name: Use toc2.yaml
         if: ${{ github.event_name == 'workflow_dispatch' }}
