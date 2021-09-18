@@ -74,10 +74,11 @@ jobs:
         run: |
           poetry run jupyter-book build ./qmlcourseRU --builder pdfhtml
 
-      - uses: markwilson/html2pdf@v1.0
+      - name: html to pdf
+        uses: fifsky/html-to-pdf-action@master
         with:
-          htmlPath: './qmlcourseRU/_build/html/book/gradsblock/'
-          pdfName: './qmlcourseRU/_build/pdf/gradsblock'          
+          htmlFile: ./qmlcourseRU/_build/html/book/gradsblock/
+          outputFile: ./qmlcourseRU/_build/pdf/gradsblock.pdf   
 
       # Push the book's HTML to github-pages
       - name: GitHub Pages action
