@@ -94,14 +94,7 @@ jobs:
             cp ./qmlcourseRU/toc/$file ./qmlcourseRU/_toc.yml
             poetry run jupyter-book build ./qmlcourseRU --builder pdfhtml
             mv ./qmlcourseRU/_build/pdf/book.pdf ./qmlcourseRU/_build/pdf/$file.pdf
-          done
-
-      - name: Use toc2.yaml
-        if: ${{ github.event_name == 'workflow_dispatch' }}
-        run: |
-          cp ./qmlcourseRU/toc/_toc2.yml ./qmlcourseRU/_toc.yml
-          poetry run jupyter-book build ./qmlcourseRU --builder pdfhtml
-          mv ./qmlcourseRU/_build/pdf/book.pdf ./qmlcourseRU/_build/pdf/toc2.pdf                     
+          done                   
 
       # Push the book's HTML to github-pages
       - name: GitHub Pages action
