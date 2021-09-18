@@ -78,7 +78,7 @@ jobs:
       - name: Use toc.yaml files for PDF
         if: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
-          for file in "./qmlcourseRU/toc"/* 
+          for file in "./qmlcourseRU/toc"/*
           do
             file=${file//.\/qmlcourseRU\/toc\//}
             file_name=${file//.yml/}
