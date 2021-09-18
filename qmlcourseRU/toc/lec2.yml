@@ -1,5 +1,6 @@
-- file: book/empty
+root: book/empty
 
+parts:
 - part: Основы Python
   chapters:
     - file: book/pythonblock/pythonintro.md
