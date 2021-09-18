@@ -88,8 +88,9 @@ jobs:
       - name: Use toc.yaml files
         if: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
-          for file in "./qmlcourseRU/toc"/* | sed -e "s/^.\/qmlcourseRU\/toc//"
+          for file in "./qmlcourseRU/toc"/* 
           do
+            file=`$file | sed -e "s/^.\/qmlcourseRU\/toc//"`
             echo "$file"
             cp ./qmlcourseRU/toc/$file ./qmlcourseRU/_toc.yml
             poetry run jupyter-book build ./qmlcourseRU --builder pdfhtml
