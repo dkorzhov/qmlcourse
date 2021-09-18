@@ -74,11 +74,14 @@ jobs:
         run: |
           poetry run jupyter-book build ./qmlcourseRU --builder pdfhtml
 
-      - name: html to pdf
-        uses: fifsky/html-to-pdf-action@master
+      - uses: actions/upload-artifact@v2
         with:
-          htmlFile: ./qmlcourseRU/_build/html/book/gradsblock/*.html
-          outputFile: ./qmlcourseRU/_build/pdf/gradsblock.pdf   
+          name: bookPDF
+          path: ./qmlcourseRU/_build/pdf/book.pdf
+
+      - name: Delete pdf file
+        run: |
+          rm ./qmlcourseRU/_build/pdf/book.pdf  
 
       # Push the book's HTML to github-pages
       - name: GitHub Pages action
