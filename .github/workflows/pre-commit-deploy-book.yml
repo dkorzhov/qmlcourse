@@ -88,7 +88,7 @@ jobs:
       - name: Use toc1.yaml
         if: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
-          poetry run jupyter-book toc migrate ./qmlcourseRU/toc/_toc1.yml -o ./qmlcourseRU/_toc.yml
+          poetry run jupyter-book toc migrate ./qmlcourseRU/toc/_toc1.yml --path-output ./qmlcourseRU/_toc.yml
           poetry run jupyter-book build ./qmlcourseRU --builder pdfhtml
           mv ./qmlcourseRU/_build/pdf/book.pdf ./qmlcourseRU/_build/pdf/toc1.pdf
 
