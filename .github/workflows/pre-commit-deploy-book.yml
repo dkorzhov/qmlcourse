@@ -85,8 +85,7 @@ jobs:
       - name: Make toc files
         if: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
-          pip3 install yaml
-          python3 ./tools/make_toc.py ./qmlcourseRU/_toc.yml ./qmlcourseRU/toc/
+          poetry run ./tools/make_toc.py ./qmlcourseRU/_toc.yml ./qmlcourseRU/toc/
 
       - name: Use toc.yaml files for PDF
         if: ${{ github.event_name == 'workflow_dispatch' }}
