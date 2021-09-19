@@ -69,6 +69,13 @@ jobs:
         run: |
           poetry run jupyter-book build ./qmlcourseRU
 
+      # Push the book's HTML to github-pages
+      - name: GitHub Pages action
+        uses: peaceiris/actions-gh-pages@v3.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./qmlcourseRU          
+
       - name: Build PDF file
         if: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
@@ -94,14 +101,14 @@ jobs:
           name: bookPDF
           path: ./qmlcourseRU/_build/pdf/*.pdf
 
-      - name: Delete pdf file
-        if: ${{ github.event_name == 'workflow_dispatch' }}
-        run: |
-          rm ./qmlcourseRU/_build/pdf/*.pdf
-
-      # Push the book's HTML to github-pages
-      - name: GitHub Pages action
-        uses: peaceiris/actions-gh-pages@v3.8.0
+      - name: Deploy only pdf files
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./qmlcourseRU
+          publish_dir: ./qmlcourseRU/_build/pdf/  
+          destination_dir: pdf          
+
+      # - name: Delete pdf file
+      #   if: ${{ github.event_name == 'workflow_dispatch' }}
+      #   run: |
+      #     rm ./qmlcourseRU/_build/pdf/*.pdf
