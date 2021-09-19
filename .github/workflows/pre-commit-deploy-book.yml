@@ -105,8 +105,8 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./qmlcourseRU/_build/pdf/  
-          destination_dir: pdf          
+          publish_dir: ./qmlcourseRU/_build/pdf/
+          destination_dir: pdf
 
       # - name: Delete pdf file
       #   if: ${{ github.event_name == 'workflow_dispatch' }}
