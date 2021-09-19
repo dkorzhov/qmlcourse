@@ -85,6 +85,7 @@ jobs:
       - name: Make toc files
         if: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
+          pip3 install yaml
           python3 ./tools/make_toc.py ./qmlcourseRU/_toc.yml ./qmlcourseRU/toc/
 
       - name: Use toc.yaml files for PDF
@@ -100,11 +101,11 @@ jobs:
             mv ./qmlcourseRU/_build/pdf/book.pdf ./qmlcourseRU/_build/pdf/$file_name.pdf
           done
 
-      - uses: actions/upload-artifact@v2
-        if: ${{ github.event_name == 'workflow_dispatch' }}
-        with:
-          name: bookPDF
-          path: ./qmlcourseRU/_build/pdf/*.pdf
+      # - uses: actions/upload-artifact@v2
+      #   if: ${{ github.event_name == 'workflow_dispatch' }}
+      #   with:
+      #     name: bookPDF
+      #     path: ./qmlcourseRU/_build/pdf/*.pdf
 
       - name: Deploy only pdf files
         uses: peaceiris/actions-gh-pages@v3
