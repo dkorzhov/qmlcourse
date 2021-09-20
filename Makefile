@@ -29,7 +29,8 @@ install-python-poetry-windows:
 	cmd //C python3 -V
 
 	cmd //C python3 "%TMP%\get-poetry.py"
-	cmd //C "C:\tools\miniconda3\conda install psi4=1.4rc4.dev1 python=3.8 -c psi4/label/dev -c conda-forge"
+	cmd //C refreshenv
+	cmd //C "conda install psi4=1.4rc4.dev1 python=3.8 -c psi4/label/dev -c conda-forge"
 
 	cmd //C "%USERPROFILE%\.poetry\bin\poetry remove tensorflow-quantum"
 	cmd //C "%USERPROFILE%\.poetry\bin\poetry install"
