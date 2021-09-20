@@ -31,7 +31,7 @@ install-python-poetry-windows:
 
 	pwsh -noprofile -command Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -OutFile "c:/temp/get-poetry.py"
 	pwsh -noprofile -command python3 "c:/temp/get-poetry.py"
-	pwsh -noprofile -command %USERPROFILE%\.poetry\bin\poetry --version
+	pwsh -noprofile -command "%USERPROFILE%\.poetry\bin\poetry --version"
 
 install-psi4:
 	bash Psi4conda-1.4rc3-py38.sh -b -u -p $(HOME)/psi4conda
