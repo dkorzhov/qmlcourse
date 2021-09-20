@@ -1,5 +1,5 @@
 .ONESHELL:
-SHELL = /bin/bash
+# SHELL = /bin/bash
 
 export PATH := $(HOME)/.poetry/bin:$(PATH)
 
@@ -29,7 +29,6 @@ install-python-poetry-windows:
 	pwsh -noprofile -command [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 	pwsh -noprofile -command Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -OutFile "c:/temp/get-poetry.py"
 	python3 "c:/temp/get-poetry.py"
-	# pwsh -noprofile -command $$env:Path += ";%USERPROFILE%\.poetry\bin" 
 	%USERPROFILE%\.poetry\bin\poetry --version
 
 install-psi4:
