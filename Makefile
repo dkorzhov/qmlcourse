@@ -27,7 +27,7 @@ install-python-poetry-windows:
 	cmd //C curl https://www.python.org/ftp/python/3.8.5/python-3.8.5.exe --output "%TMP%\python-3.8.5.exe" 
 	cmd //C "%TMP%\python-3.8.5.exe" /quiet InstallAllUsers=1 PrependPath=1 TargetDir="C:\Python38"
 	cmd //C curl https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py --output "%TMP%\get-poetry.py"
-	cmd //C python -V
+	cmd //C python3 -V
 
 	cmd //C python3 "c:/temp/get-poetry.py"
 	cmd //C "%USERPROFILE%\.poetry\bin\poetry remove tensorflow-quantum"

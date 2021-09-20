@@ -20,7 +20,7 @@ jobs:
 
       - name: Install make
         run: |
-          choco install make curl
+          choco install make curl conda
 
       - name: Install dependencies
         run: make install-windows
