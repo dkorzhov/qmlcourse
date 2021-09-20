@@ -45,5 +45,5 @@ install-python-poetry-windows:
 	cmd //C "%USERPROFILE%\.poetry\bin\poetry install"
 
 build-windows:
-	cmd //C "%USERPROFILE%\.poetry\bin\poetry run psi4 --test
+	cmd //C "%USERPROFILE%\.poetry\bin\poetry run psi4 --test"
 	cmd //C "%USERPROFILE%\.poetry\bin\poetry run jupyter-book build ./qmlcourseRU"
