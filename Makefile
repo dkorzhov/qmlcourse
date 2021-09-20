@@ -1,5 +1,5 @@
 .ONESHELL:
-# SHELL = /bin/bash
+SHELL = /bin/bash
 
 export PATH := $(HOME)/.poetry/bin:$(PATH)
 
@@ -23,6 +23,16 @@ install-python-poetry-macOS:
 
 	curl "http://vergil.chemistry.gatech.edu/psicode-download/Psi4conda-1.4rc3-py38-MacOSX-x86_64.sh" -o Psi4conda-1.4rc3-py38.sh --keepalive-time 2
 
+install-psi4:
+	bash Psi4conda-1.4rc3-py38.sh -b -u -p $(HOME)/psi4conda
+
+install-python-dependencies:
+	poetry install
+
+build:
+	cd $(HOME)/psi4conda/etc/profile.d/ && source conda.sh && conda activate && cd - && poetry run psi4 --test
+	poetry run jupyter-book build ./qmlcourseRU
+
 install-python-poetry-windows:
 	cmd //C curl https://www.python.org/ftp/python/3.8.5/python-3.8.5.exe --output "%TMP%\python-3.8.5.exe" && "%TMP%\python-3.8.5.exe" /silent
 	cmd //C curl https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py --output "%TMP%\get-poetry.py"
@@ -33,16 +43,6 @@ install-python-poetry-windows:
 
 	cmd //C "%USERPROFILE%\.poetry\bin\poetry remove tensorflow-quantum"
 	cmd //C "%USERPROFILE%\.poetry\bin\poetry install"
-
-install-psi4:
-	bash Psi4conda-1.4rc3-py38.sh -b -u -p $(HOME)/psi4conda
-
-install-python-dependencies:
-	poetry install
-
-build:
-	cd $(HOME)/psi4conda/etc/profile.d/ && source conda.sh && conda activate && cd - && poetry run psi4 --test
-	poetry run jupyter-book build ./qmlcourseRU
 
 build-windows:
 	cmd //C "%USERPROFILE%\.poetry\bin\poetry run jupyter-book build ./qmlcourseRU"
