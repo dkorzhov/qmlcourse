@@ -23,4 +23,7 @@ jobs:
           choco install make curl
 
       - name: Install dependencies
-        run: make install-windows         
+        run: make install-windows
+
+      - name: Build
+        run: make build-windows          

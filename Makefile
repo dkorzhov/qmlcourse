@@ -24,11 +24,11 @@ install-python-poetry-macOS:
 	curl "http://vergil.chemistry.gatech.edu/psicode-download/Psi4conda-1.4rc3-py38-MacOSX-x86_64.sh" -o Psi4conda-1.4rc3-py38.sh --keepalive-time 2
 
 install-python-poetry-windows:
-	cmd //C curl https://www.python.org/ftp/python/3.8.5/python-3.8.5.exe --output "%TMP%\python-3.8.5.exe" && "%TMP%\python-3.8.5.exe" /silent
+	cmd //C curl https://www.python.org/ftp/python/3.8.5/python-3.8.5.exe --output "%TMP%\python-3.8.5.exe" 
+	cmd //C "%TMP%\python-3.8.5.exe" /quiet InstallAllUsers=1 PrependPath=1 TargetDir="C:\Python38"
+	cmd //C curl https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py --output "%TMP%\get-poetry.py"
 	cmd //C python -V
 
-	pwsh -noprofile -command [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-	pwsh -noprofile -command Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -OutFile "c:/temp/get-poetry.py"
 	cmd //C python3 "c:/temp/get-poetry.py"
 	cmd //C "%USERPROFILE%\.poetry\bin\poetry remove tensorflow-quantum"
 	cmd //C "%USERPROFILE%\.poetry\bin\poetry install"
@@ -42,3 +42,6 @@ install-python-dependencies:
 build:
 	cd $(HOME)/psi4conda/etc/profile.d/ && source conda.sh && conda activate && cd - && poetry run psi4 --test
 	poetry run jupyter-book build ./qmlcourseRU
+
+build-windows:
+	cmd //C "%USERPROFILE%\.poetry\bin\poetry run jupyter-book build ./qmlcourseRU"
