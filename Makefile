@@ -24,9 +24,11 @@ install-python-poetry-macOS:
 	curl "http://vergil.chemistry.gatech.edu/psicode-download/Psi4conda-1.4rc3-py38-MacOSX-x86_64.sh" -o Psi4conda-1.4rc3-py38.sh --keepalive-time 2
 
 install-python-poetry-windows:
-	choco install -y python3 
-
 	pwsh -noprofile -command [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+	pwsh -noprofile -command Invoke-WebRequest -Uri "https://www.python.org/ftp/python/3.8.0/python-3.8.0.exe" -OutFile "c:/temp/python-3.8.0.exe"
+	pwsh -noprofile -command c:/temp/python-3.8.0.exe /quiet InstallAllUsers=0 PrependPath=1 Include_test=0
+
 	pwsh -noprofile -command Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -OutFile "c:/temp/get-poetry.py"
 	python3 "c:/temp/get-poetry.py"
 	%USERPROFILE%\.poetry\bin\poetry --version
