@@ -11,7 +11,7 @@ on:
 
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
-  deploy-book-linux-macOS:
+  deploy-book-linux:
     if: contains(github.event.inputs.os, 'windows-latest')
     runs-on: ${{ matrix.os }}
     strategy:
