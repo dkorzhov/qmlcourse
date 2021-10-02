@@ -19,18 +19,17 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macOS-latest, windows-latest]   
+        os: [ubuntu-latest, macOS-latest]   
     steps:
       - name: Checkout branch for build
-        if: ${{ runner.os != 'Windows'}} 
         if: contains(matrix.os, github.event.inputs.OS)
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        if: ${{ runner.os != 'Windows'}}
+        if: contains(matrix.os, github.event.inputs.OS)
         run: make install-${{ matrix.os }}
 
       - name: Build the book
-        if: ${{ runner.os != 'Windows'}}
+        if: contains(matrix.os, github.event.inputs.OS)
         run: |
           make build
