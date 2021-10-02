@@ -12,7 +12,7 @@ on:
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
-    if: ${{ contains(${{ matrix.os }}, ${{ github.event.inputs.OS }})
+    if: ${{ contains(${{ matrix.os }}, ${{ github.event.inputs.OS }}) }}
     runs-on: ${{ matrix.os }}
     defaults:
       run:
