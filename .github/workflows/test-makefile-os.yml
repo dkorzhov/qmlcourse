@@ -35,7 +35,7 @@ jobs:
           make build
           
   deploy-book-windows:
-    if: contains('windows-latest', github.event.inputs.OS)
+    if: contains('windows-latest', ${{ github.event.inputs.OS }})
     runs-on: windows-latest
     defaults:
       run:
