@@ -3,6 +3,11 @@ name: test-makefile-os-ubuntu-macos
 # Only run this when the master branch changes
 on:
   workflow_dispatch:
+    inputs:
+      OS:
+        description: 'Choose OS for test'
+        required: false
+        default: 'ubuntu-latest, macOS-latest, windows-latest'  
 
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
@@ -14,7 +19,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macOS-latest]
+        os: [ '${{ github.event.inputs.OS }}' ]
     steps:
       - name: Checkout branch for build
         uses: actions/checkout@v2
