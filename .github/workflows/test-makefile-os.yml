@@ -22,7 +22,7 @@ jobs:
         os: [ubuntu-latest, macOS-latest, windows-latest]   
     steps:
       - name: Checkout branch for build
-        if: ${{ runner.os != 'Windows'}}
+        if: ${{ runner.os != 'Windows'}} && contains(matrix.os, github.event.inputs.OS)
         uses: actions/checkout@v2
 
       - name: Install dependencies
