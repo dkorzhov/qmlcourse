@@ -22,15 +22,15 @@ jobs:
         os: [ubuntu-latest, macOS-latest]   
     steps:
       - name: Checkout branch for build
-        if: contains(matrix.os, github.event.inputs.OS)
+        if: contains(matrix.os, ${{ github.event.inputs.OS }})
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        if: contains(matrix.os, github.event.inputs.OS)
+        if: contains(matrix.os, ${{ github.event.inputs.OS }})
         run: make install-${{ matrix.os }}
 
       - name: Build the book
-        if: contains(matrix.os, github.event.inputs.OS)
+        if: contains(matrix.os, ${{ github.event.inputs.OS }})
         run: |
           make build
           
