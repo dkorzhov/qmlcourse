@@ -21,6 +21,9 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macOS-latest, windows-latest]
+        exclude:
+          if: contains('windows-latest', ${{ github.event.inputs.OS }})
+          - os: windows-latest     
     steps:
       - name: Checkout branch for build
         uses: actions/checkout@v2
