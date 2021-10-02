@@ -29,7 +29,7 @@ install-psi4:
 install-python-dependencies:
 	poetry install
 
-build:
+build-linux-macos:
 	cd $(HOME)/psi4conda/etc/profile.d/ && source conda.sh && conda activate && cd - && poetry run psi4 --test
 	poetry run jupyter-book build ./qmlcourseRU
 
@@ -47,4 +47,3 @@ install-python-poetry-windows:
 build-windows:
 	cmd //C "%USERPROFILE%\.poetry\bin\poetry run psi4 --test"
 	cmd //C "%USERPROFILE%\.poetry\bin\poetry run jupyter-book build ./qmlcourseRU"
-	
