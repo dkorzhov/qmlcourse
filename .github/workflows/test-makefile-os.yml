@@ -4,7 +4,7 @@ name: test-makefile-os-linux-ubuntu-windows
 on:
   workflow_dispatch:
     inputs:
-      OS:
+      os:
         description: 'Choose OS for test'
         required: false
         default: ubuntu-latest, macOS-latest, windows-latest
@@ -22,20 +22,20 @@ jobs:
         os: [ubuntu-latest, macOS-latest]   
     steps:
       - name: Checkout branch for build
-        if: contains(matrix.os, ${{ github.event.inputs.OS }})
+        if: contains(matrix.os, ${{ github.event.inputs.os }})
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        if: contains(matrix.os, ${{ github.event.inputs.OS }})
+        if: contains(matrix.os, ${{ github.event.inputs.os }})
         run: make install-${{ matrix.os }}
 
       - name: Build the book
-        if: contains(matrix.os, ${{ github.event.inputs.OS }})
+        if: contains(matrix.os, ${{ github.event.inputs.os }})
         run: |
           make build
           
   deploy-book-windows:
-    if: contains('windows-latest', ${{ github.event.inputs.OS }})
+    if: contains('windows-latest', ${{ github.event.inputs.os }})
     runs-on: windows-latest
     defaults:
       run:
