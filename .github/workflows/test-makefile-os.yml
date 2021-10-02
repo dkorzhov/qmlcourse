@@ -12,6 +12,7 @@ on:
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
+    if: ${{ contains(${{ matrix.os }}, ${{ github.event.inputs.OS }})
     runs-on: ${{ matrix.os }}
     defaults:
       run:
@@ -19,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ${{github.event.inputs.OS}}
+        os: [ubuntu-latest, macOS-latest, windows-latest]
     steps:
       - name: Checkout branch for build
         uses: actions/checkout@v2
