@@ -22,14 +22,14 @@ jobs:
         os: [ubuntu-latest, macOS-latest, windows-latest]   
     steps:
       - name: Checkout branch for build
-        if: contains(${{ matrix.os }}, ${{ github.event.inputs.OS }})&&(${{ matrix.os }} != 'windows-latest')
+        if: ((contains(${{ matrix.os }}, ${{ github.event.inputs.OS }}))&&(${{ matrix.os }} != 'windows-latest'))
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        if: contains(${{ matrix.os }}, ${{ github.event.inputs.OS }})&&(${{ matrix.os }} != 'windows-latest')
+        if: (contains(${{ matrix.os }}, ${{ github.event.inputs.OS }}))&&(${{ matrix.os }} != 'windows-latest')
         run: make install-${{ matrix.os }}
 
       - name: Build the book
-        if: contains(${{ matrix.os }}, ${{ github.event.inputs.OS }})&&(${{ matrix.os }} != 'windows-latest')
+        if: (contains(${{ matrix.os }}, ${{ github.event.inputs.OS }}))&&(${{ matrix.os }} != 'windows-latest')
         run: |
           make build
