@@ -19,7 +19,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ '${{ github.event.inputs.OS }}' ]
+        os: ${{fromJson(github.event.inputs.OS)}}
     steps:
       - name: Checkout branch for build
         uses: actions/checkout@v2
