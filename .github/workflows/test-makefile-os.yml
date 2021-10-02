@@ -12,7 +12,6 @@ on:
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
-    if: "!contains('windows-latest', ${{ github.event.inputs.OS }})"
     runs-on: ${{ matrix.os }}
     defaults:
       run:
@@ -23,14 +22,14 @@ jobs:
         os: [ubuntu-latest, macOS-latest, windows-latest]   
     steps:
       - name: Checkout branch for build
-        if: contains(${{ matrix.os }}, ${{ github.event.inputs.OS }})
+        if: (contains(${{ matrix.os }}, ${{ github.event.inputs.OS }}))||(${{ matrix.os }} != 'windows-latest')
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        if: contains(${{ matrix.os }}, ${{ github.event.inputs.OS }})
+        if: contains(${{ matrix.os }}, ${{ github.event.inputs.OS }})||(${{ matrix.os }} != 'windows-latest')
         run: make install-${{ matrix.os }}
 
       - name: Build the book
-        if: contains(${{ matrix.os }}, ${{ github.event.inputs.OS }})
+        if: contains(${{ matrix.os }}, ${{ github.event.inputs.OS }})||(${{ matrix.os }} != 'windows-latest')
         run: |
           make build
