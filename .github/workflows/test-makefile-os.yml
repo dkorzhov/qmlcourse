@@ -7,7 +7,7 @@ on:
       OS:
         description: 'Choose OS for test'
         required: false
-        default: [ubuntu-latest, macOS-latest, windows-latest]
+        default: ubuntu-latest, macOS-latest, windows-latest
 
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
