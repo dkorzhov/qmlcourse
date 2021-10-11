@@ -89,4 +89,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./qmlcourseRU/_build/pdf/
           destination_dir: pdf
-
