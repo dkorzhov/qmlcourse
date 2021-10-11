@@ -7,7 +7,7 @@ Traceback (most recent call last):
     return just_run(coro(*args, **kwargs))
   File "/home/runner/work/qmlcourse/qmlcourse/.venv/lib/python3.8/site-packages/nbclient/util.py", line 57, in just_run
     return loop.run_until_complete(coro)
-  File "/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
     return future.result()
   File "/home/runner/work/qmlcourse/qmlcourse/.venv/lib/python3.8/site-packages/nbclient/client.py", line 558, in async_execute
     await self.async_execute_cell(
@@ -24,7 +24,7 @@ h_atom = psi4.geometry("H")
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[0;32m/tmp/ipykernel_3154/693153482.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_3269/693153482.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0;32mimport[0m [0mpsi4[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      2[0m [0;34m[0m[0m
 [1;32m      3[0m [0mh_atom[0m [0;34m=[0m [0mpsi4[0m[0;34m.[0m[0mgeometry[0m[0;34m([0m[0;34m"H"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
