@@ -52,6 +52,8 @@ jobs:
           python-version: 3.8
           conda-channels: anaconda, conda-forge
 
+      - run: conda install psi4=1.4rc3 python=3.8 -c psi4/label/dev -y          
+
       #Use cache
       - name: Copy cache dir for dependecies
         uses: actions/cache@v2
@@ -64,11 +66,9 @@ jobs:
       - name: Install dependencies
         run: |
           poetry install
-          poetry add ipykernel
 
       - name: Build the book
         run: |
-          conda install psi4=1.4rc3 python=3.8 -c psi4/label/dev -y
           poetry run psi4 --test        
           poetry run jupyter-book build ./qmlcourseRU
 
