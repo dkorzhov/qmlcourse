@@ -7,13 +7,11 @@ on:
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest]
+    runs-on: ubuntu-latest
     steps:
-
+      - name: Checkout branch for build
+        uses: actions/checkout@v2
+        
       # Install dependencies
       - name: Set up Python 3.8
         uses: actions/setup-python@v2.2.2
@@ -30,12 +28,13 @@ jobs:
       - name: Setup conda
         uses: s-weigand/setup-conda@v1
         with:
-          update-conda: true
+          update-conda: false
           python-version: 3.8
           conda-channels: anaconda, conda-forge
 
       - run: conda install psi4=1.4rc3 python=3.8 -c psi4/label/dev -y
       - run: poetry run psi4 --test
+      - run: poetry add psi4    
 
       - name: Build the book
         run: |
