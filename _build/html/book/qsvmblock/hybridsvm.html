@@ -846,6 +846,10 @@ K(x, y) = e^{-\frac{||x - y||^2}{\sigma}}
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/work/qmlcourse/qmlcourse/.venv/lib/python3.8/site-packages/pennylane/utils.py:351: UserWarning: Use of qml.inv() is deprecated and should be replaced with qml.adjoint().
+  warnings.warn(
+</pre></div>
+</div>
 </div>
 </div>
 <p>И сразу посмотрим на то, как выглядит наша схема:</p>
@@ -856,8 +860,8 @@ K(x, y) = e^{-\frac{||x - y||^2}{\sigma}}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 0: ──H──Rϕ(-0.977)──H──╭C────────────╭C──╭C────────────────╭C────H⁻¹──Rϕ(0.311)⁻¹───H⁻¹──╭┤ Probs 
- 1: ──H──Rϕ(0.0118)──H──╰X──Rϕ(1.76)──╰X──╰X⁻¹──Rϕ(2.99)⁻¹──╰X⁻¹──H⁻¹──Rϕ(0.0118)⁻¹──H⁻¹──╰┤ Probs 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 0: ──H──Rϕ(1)──────H──╭C───────────╭C──╭C─────────────╭C──H──Rϕ(0.0782)──H──╭┤ Probs 
+ 1: ──H──Rϕ(0.333)──H──╰X──Rϕ(1.6)──╰X──╰X──Rϕ(-1.95)──╰X──H──Rϕ(-0.899)──H──╰┤ Probs 
 </pre></div>
 </div>
 </div>
