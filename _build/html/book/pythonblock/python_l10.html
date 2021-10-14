@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Объекты, классы и методы &#8212; QMLCourse</title>
+    <title>Финальная лекция обо всем и ни о чем &#8212; QMLCourse</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,6 +53,8 @@
     <link rel="shortcut icon" href="../../_static/qmlcourse_favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="О блоке" href="../mlblock/ml_intro.html" />
+    <link rel="prev" title="Объекты, классы и методы" href="python_l9.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -100,13 +102,18 @@
    🟦 О квантовых компьютерах
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../prerequisite.html">
+   ⬜ Пререквизиты курса
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
   Основы Python
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="pythonintro.html">
    ⬜ О блоке
@@ -115,6 +122,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="python_l1.html">
    🟦 Вводная лекция про Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_l2.html">
+   🟦 Установка инструментов
   </a>
  </li>
  <li class="toctree-l1">
@@ -135,6 +147,26 @@
  <li class="toctree-l1">
   <a class="reference internal" href="python_l6.html">
    🟦 Списки и циклы
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_l7.html">
+   🟦 Словари
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_l8.html">
+   🟦 Функции
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_l9.html">
+   🟦 Объекты и классы
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   🟦 Финальная лекция
   </a>
  </li>
 </ul>
@@ -182,8 +214,35 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../qcblock/quantum_algorithms_overview.html">
+   🟩 Обзор квантовых алгоритмов
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../qcblock/grovers_algorithm.html">
    🟧 Алгоритм Гровера
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Железо квантовых компьютеров
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../hwblock/hwintro.html">
+   ⬜ О блоке
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../hwblock/hwreview.html">
+   🟩 Обзор
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../hwblock/scqubits.html">
+   🟥 Сверхпроводниковые кубиты
   </a>
  </li>
 </ul>
@@ -262,6 +321,23 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../qsvmblock/hybridsvm.html">
    🟩 Гибридный SVM
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Квантовые нейронные сети
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../qnnblock/qnnintro.html">
+   ⬜ О блоке
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../qnnblock/qconv.html">
+   🟩 Квантовые сверточные сети
   </a>
  </li>
 </ul>
@@ -422,22 +498,22 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id3">
-   ООП: Объектно-Ориентированное Программирование
+   Заметки по прохождению курса
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id4">
-   Определение классов
+   Примеры кода, не разобранные в лекциях
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id5">
-   Пример использования для хранения состояние
+   Блок дополнительных ссылок
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id6">
-   Что мы узнали из лекции
+   Вместо заключения
   </a>
  </li>
 </ul>
@@ -452,263 +528,126 @@
               <div>
                 
   <div class="section" id="python-l10">
-<span id="id1"></span><h1>Объекты, классы и методы<a class="headerlink" href="#python-l10" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>Финальная лекция обо всем и ни о чем<a class="headerlink" href="#python-l10" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id2">
 <h2>Описание лекции<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>В этой лекции мы расскажем про:</p>
+<p>В этой лекции будет:</p>
 <ul class="simple">
-<li><p>основы ООП: что это и зачем?</p></li>
-<li><p>инстанс класса</p></li>
-<li><p>на что указывает <code class="docutils literal notranslate"><span class="pre">self</span></code></p></li>
-<li><p>методы классов в уже знакомых примерах</p></li>
-<li><p>атрибуты классов</p></li>
+<li><p>рассказ о типовых ошибках при прохождении курса;</p></li>
+<li><p>разбор примеров кода из курса;</p></li>
+<li><p>дополнение для самых любознательных о <code class="docutils literal notranslate"><span class="pre">Python</span></code>, ML и вообще.</p></li>
 </ul>
 </div>
 <div class="section" id="id3">
-<h2>ООП: Объектно-Ориентированное Программирование<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>Что же такое объектно-ориентированное программирование? Судя по названию, ключевую роль здесь играют объекты, на которые ориентируется дальнейший процесс программирования. Если мы взглянем на реальный мир, то для нас он предстанет в виде множества объектов, обладающих определенными свойствами, взаимодействующих между собой и вследствие этого изменяющимися. Эта привычная для взгляда человека картина мира была перенесена в программирование. Python - это объектно-ориентированный язык программирования, и <strong>все в нем является объектами</strong>.</p>
-<p><strong>Объект</strong> - это набор данных и инструкций в памяти компьютера, в том числе:</p>
-<ol class="simple">
-<li><p>Тип объекта;</p></li>
-<li><p>Данные, формирующие объект (контент внутри него);</p></li>
-<li><p>Методы.</p></li>
-</ol>
-<div class="figure align-default" id="class-and-obj1">
-<a class="reference internal image-reference" href="../../_images/class_and_obj1.png"><img alt="../../_images/class_and_obj1.png" src="../../_images/class_and_obj1.png" style="width: 250px;" /></a>
-<p class="caption"><span class="caption-text">Так можно проиллюстрировать соотношение “класс - объекты”. Сверху указаны общие прототипы (прямоугольник, звезда, треугольник), снизу - уникальные экземпляры, со своим цветом и деталями.</span><a class="headerlink" href="#class-and-obj1" title="Permalink to this image">¶</a></p>
+<h2>Заметки по прохождению курса<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Хоть в пройденных лекциях по <code class="docutils literal notranslate"><span class="pre">Python</span></code> и содержится большое количество материала, проиллюстрированного примерами, с указанием на дополнительные темы для самостоятельного изучения – это все еще малая доля того, с чем вам придется столкнуться, если захочется продолжить развитие в теме ML/QML. Да, это грустно, но такова правда жизни. А еще вы столкнетесь с кучей проблем и ошибок во время прохождения самого курса. Если вы <strong>попытались разобраться</strong> с чем-либо, но у вас не получилось – приходите к нам в сообщество в Slack, задавайте вопросы. Не забывайте и о взаимопомощи другим студентам – если материал или тема дались вам легко, то кому-то они могут показаться адски сложными.</p>
+<p>Помните, что абсолютное большинство возникающих ошибок в <code class="docutils literal notranslate"><span class="pre">Python</span></code> неуникально, и вы не первый, кто наступил на эти грабли. Не стесняйтесь пользоваться поисковиками для нахождения решений. Но перед этим обязательно прочитайте текст ошибки, попробуйте осознать, о чем <code class="docutils literal notranslate"><span class="pre">Python</span></code> хочет вам сказать - в этом языке программирования одни из самых понятных и доступных подсказок и указателей на проблемы. К примеру, <code class="docutils literal notranslate"><span class="pre">IndexError:</span> <span class="pre">list</span> <span class="pre">index</span> <span class="pre">out</span> <span class="pre">of</span> <span class="pre">range</span></code> явно говорит о том, что во время обращения к i-тому объекту некоторого списка (который, кстати, будет указан в так называемом трейсбеке, от англ. traceback) возник выход за границы <code class="docutils literal notranslate"><span class="pre">list</span></code>. Возьмем для примера список <code class="docutils literal notranslate"><span class="pre">sample_list</span></code> чисел длины 5. Что произойдет, если обратиться к седьмому объекту <code class="docutils literal notranslate"><span class="pre">sample_list[7]</span></code>?</p>
+<div class="figure align-default" id="example-traceback">
+<a class="reference internal image-reference" href="../../_images/example_traceback.png"><img alt="../../_images/example_traceback.png" src="../../_images/example_traceback.png" style="width: 550px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 38 </span><span class="caption-text">Получим ошибку</span><a class="headerlink" href="#example-traceback" title="Permalink to this image">¶</a></p>
 </div>
-<p>Как определить тип мы уже знаем. И с объектами на самом деле мы знакомы с самого начала - ведь даже целочисленная переменная <code class="docutils literal notranslate"><span class="pre">5</span></code>, имеющая <code class="docutils literal notranslate"><span class="pre">type(5)</span> <span class="pre">=</span> <span class="pre">int</span></code>, представляет собой объект. Напомним, что говорилось в курсе ранее: <strong>методы - это те же функции, только существующие не сами по себе, а являющиеся частью класса</strong>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">example_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">([</span><span class="s2">&quot;что-то&quot;</span><span class="p">,</span> <span class="s2">&quot;с&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Метод append имеет тип </span><span class="si">{</span><span class="n">example_list</span><span class="o">.</span><span class="n">append</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="c1"># вот так можно вызвать метод, изменяя сам экземпляр класса</span>
-<span class="n">example_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;чем-то&quot;</span><span class="p">)</span>
-
-<span class="c1"># а вот так можно обратиться к атрибуту конкретного объекта</span>
-<span class="n">attr_value</span> <span class="o">=</span> <span class="n">example_list</span><span class="o">.</span><span class="vm">__doc__</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Значение атрибута: </span><span class="si">{</span><span class="n">attr_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
+<p>Обратите внимание на стрелочку слева, указывающую на строку номер 5 (кстати, в Jupyter Notebook для каждой отдельной ячейки можно включить нумерацию строк для удобства навигации с помощью клавиши <code class="docutils literal notranslate"><span class="pre">l</span></code>). Это место возникновения ошибки, та строка, на которой <code class="docutils literal notranslate"><span class="pre">Python</span></code> не смог выполнить инструкцию. Как можно решить проблему? Для начала <strong>методом пристального взгляда</strong> поймите, написано ли в коде то, что вы хотели – очень часто код, к примеру, копируется (хотя нужно избегать этого с помощью написания функций), но переменные в нем не меняются в силу невнимательности. Если все переменные в строке те же, что и должны быть, и ошибка не ясна, то следует заняться <a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%9E%D1%82%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B">отладкой кода</a>.</p>
+<p>Самый простой способ отладки в Jupyter – это расстановка <code class="docutils literal notranslate"><span class="pre">print</span></code>’ов до проблемной строки. Да-да, так кустарно и грубо. Есть более продвинутые технологии (например, <a class="reference external" href="https://code.visualstudio.com/docs/python/debugging">отладчики</a> в IDE, то есть средах разработки), однако они выходят за рамки данного курса. Очевидный совет - нужно размещать такой <code class="docutils literal notranslate"><span class="pre">print</span></code>, который помогает проверить какую-либо <strong>гипотезу</strong> о происхождении ошибки. Предложение таких гипотез – это отдельный навык, который приходит с опытом, так что не переживайте, что поначалу получается плохо “угадывать” и “понимать” ошибки.</p>
+<p>В случае обращения по неверному индексу (<code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">index</span> <span class="pre">out</span> <span class="pre">of</span> <span class="pre">range</span></code>) логично предположить, что индекс оказался больше максимально возможного значения. Давайте выведем длину списка и индекс, по которому хотим обратиться:</p>
+<div class="figure align-default" id="example-debug">
+<a class="reference internal image-reference" href="../../_images/example_debug.png"><img alt="../../_images/example_debug.png" src="../../_images/example_debug.png" style="width: 550px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 39 </span><span class="caption-text">Строчку с вашим отладочным выводом легко потерять - для удобства можно добавлять какие-то символы или текст.</span><a class="headerlink" href="#example-debug" title="Permalink to this image">¶</a></p>
 </div>
+<p>И исходя из аргументов выше становится очевидно, в чем именно проблема. Конечно, рассмотренный случай крайне тривиален, однако он показывает базовые приемы поиска причин ошибок. Отметим также такой полезный прием как разбитие проблемной строки кода на подстроки, то есть разнесение кода на отдельные изолированные куски. В данном примере в отдельную переменную был записан индекс. Однако попробуйте угадать, в каком месте происходит ошибка в коде ниже:</p>
+<div class="figure align-default" id="debug-hard">
+<a class="reference internal image-reference" href="../../_images/debug_hard.png"><img alt="../../_images/debug_hard.png" src="../../_images/debug_hard.png" style="width: 550px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 40 </span><span class="caption-text">Трейсбек ошибки предательски указывает на функцию, при вызове которой возникла ошибка - <code class="docutils literal notranslate"><span class="pre">third_f</span></code></span><a class="headerlink" href="#debug-hard" title="Permalink to this image">¶</a></p>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Метод append имеет тип &lt;built-in method append of list object at 0x7fc4accd3540&gt;
-Значение атрибута: Built-in mutable sequence.
-
-If no argument is given, the constructor creates a new empty list.
-The argument must be an iterable if specified.
-</pre></div>
+<p>Это уже более сложный пример, когда трейсбек состоит из двух блоков. Указатель на ошибку как бы “проваливается” внутрь вызываемой функции и показывает, что не так. В данном случае ошибка <code class="docutils literal notranslate"><span class="pre">TypeError:</span> <span class="pre">unsupported</span> <span class="pre">operand</span> <span class="pre">type(s)</span> <span class="pre">for</span> <span class="pre">+:</span> <span class="pre">'int'</span> <span class="pre">and</span> <span class="pre">'str'</span></code> указывает на несовместимость типов операндов в операции сложения. Слева <code class="docutils literal notranslate"><span class="pre">int</span></code>, справа <code class="docutils literal notranslate"><span class="pre">str</span></code> – ну и как же их суммировать?</p>
+<p>Однако исходная строчка, порождающая ошибку, крайне сложна. Мы вызываем функцию (<code class="docutils literal notranslate"><span class="pre">print</span></code>) от функции (<code class="docutils literal notranslate"><span class="pre">first_f</span></code>) от функции… Будь логика в коде чуть сложнее – легко можно было бы запутаться, что именно породило ошибку (главное обращайте внимание на заголовки трейсбека, указывающие на названия методов и функций). С разбиением все проще:</p>
+<div class="figure align-default" id="debug-solved">
+<a class="reference internal image-reference" href="../../_images/debug_solved.png"><img alt="../../_images/debug_solved.png" src="../../_images/debug_solved.png" style="width: 550px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 41 </span><span class="caption-text">Вуаля! Указатель в виде стрелочки прямо рапотрует о том, что проблема в вычислении <code class="docutils literal notranslate"><span class="pre">third_f</span></code>. Дальше можно было бы добавить <code class="docutils literal notranslate"><span class="pre">print(tmp1)</span></code> для того, чтобы увидеть входные параметры и попытаться понять, в чем же проблема.</span><a class="headerlink" href="#debug-solved" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">list</span></code> - это класс, и в первой строчке кода выше создается <strong>объект, или экземпляр класса</strong> <code class="docutils literal notranslate"><span class="pre">example_list</span></code>. Он хранит свой набор данных (контент). Метод <code class="docutils literal notranslate"><span class="pre">append</span></code> общий для всех списков, однако меняет только конкретный экземпляр. Обратите внимание: этот метод ничего не возвращает, он меняет сам объект и его контент. Не все методы работают схожим образом, и придется запоминать принцип работы самых распространенных методов. К примеру, сложение чисел или строк внутри Python также осуществляется с помощью методов, однако это не меняет саму переменную, как было рассказано в более ранних лекциях:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># создадим два объекта класса int</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-
-<span class="c1"># неявно вызовем метод сложения</span>
-<span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<span class="c1"># проверим, что содержимое объектов не изменилось</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">a</span> <span class="si">= }</span><span class="s2">, </span><span class="si">{</span><span class="n">b</span> <span class="si">= }</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a = 3, b = 4
-</pre></div>
-</div>
-</div>
-</div>
-<p>Конкретно в данном случае логика работы обусловлена свойствами <code class="docutils literal notranslate"><span class="pre">mutable</span></code>/<code class="docutils literal notranslate"><span class="pre">immutable</span></code> объектов, о чем также упоминалось в одной из предшествующих лекций. <code class="docutils literal notranslate"><span class="pre">int</span></code> неизменяем, и потому при вызове метода сложения возвращает новый объект - ведь самого себя изменить не получится. <code class="docutils literal notranslate"><span class="pre">list</span></code> же может меняться, и <code class="docutils literal notranslate"><span class="pre">append</span></code> меняет содержимое <code class="docutils literal notranslate"><span class="pre">inplace</span></code>.</p>
-<div class="figure align-default" id="class-and-obj-house">
-<a class="reference internal image-reference" href="../../_images/class_and_obj_house.png"><img alt="../../_images/class_and_obj_house.png" src="../../_images/class_and_obj_house.png" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-text">Другой житейский пример - по одному чертежу (классу) можно построить разные (но похожие!) дома, в которых разные семьи, убранство, разные обои.</span><a class="headerlink" href="#class-and-obj-house" title="Permalink to this image">¶</a></p>
-</div>
+<p>На этом остановимся, блок обязательно будет дополняться по мере возникновения типовых ошибок и способов их поимки. Главное помните, что можно распечатать и аргументы функции/метода, и атрибуты класса (в том числе скрытые/промежуточные состояния квантовой среды), и результаты расчетов.</p>
 </div>
 <div class="section" id="id4">
-<h2>Определение классов<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>Давайте попробуем создать свой первый класс:</p>
+<h2>Примеры кода, не разобранные в лекциях<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Ранее весь код, который упоминался в лекциях (за вычетом примера из первой) был написан на чистом <code class="docutils literal notranslate"><span class="pre">Python</span></code> без сторонних библиотек, которые мы так нахваливали. В курсе же, разумеется, они встретятся. Полезно поговорить о двух вещах - об <strong>импортах</strong> библиотек и об их алиасах.</p>
+<p>Для того, чтобы использовать какой-либо объект из сторонней библиотеки, будь то функция, класс или даже словарь (например, с физическими константами), необходимо знать, в какой библиотеке и по какому пути он лежит. Все это описано в документации, а также в примерах кода в курсе. Не переживайте, если они плохо запоминаются - чаще всего их копируют, и со временем в голове откладывается паттерн. И все же для того, чтобы получить доступ к библиотеке, нужно сделать следующее – рассмотрим на примере <a class="reference external" href="https://numpy.org/"><code class="docutils literal notranslate"><span class="pre">numpy</span></code></a>, библиотеки для алгебраических расчетов. Сначала следует ключевое слово <code class="docutils literal notranslate"><span class="pre">import</span></code>, затем через пробел название пакета. Опционально через <code class="docutils literal notranslate"><span class="pre">as</span></code> можно добавить алиас - название, под которым можно будет обращаться в коде для доступа к функциям. У многих пакетов есть общепринятые алиасы, с которыми все знакомы. Для <code class="docutils literal notranslate"><span class="pre">numpy</span></code> это <code class="docutils literal notranslate"><span class="pre">np</span></code>. Итак,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># определим классы</span>
-<span class="k">class</span> <span class="nc">List</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial_content</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># указывать в виде значения по умолчанию mutable-объекты неправильно</span>
-        <span class="k">if</span> <span class="n">initial_content</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">initial_content</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">initial_content</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_element</span><span class="p">):</span>
-        <span class="c1"># изменение производится inplace, с заменой собственного контента</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">+</span> <span class="p">[</span><span class="n">new_element</span><span class="p">]</span>
+<span class="n">np_example_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">np_example_array</span><span class="o">.</span><span class="n">shape</span> <span class="si">= }</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="k">class</span> <span class="nc">Int</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">second_value</span><span class="p">):</span>
-        <span class="c1"># изменение не производится, создается новый объект и он же возвращается</span>
-        <span class="k">return</span> <span class="n">Int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="n">second_value</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-
-<span class="c1"># воспроизведем примеры кода выше для List</span>
-<span class="n">example_list</span> <span class="o">=</span> <span class="n">List</span><span class="p">([</span><span class="s2">&quot;что-то&quot;</span><span class="p">,</span> <span class="s2">&quot;с&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">example_list</span><span class="o">.</span><span class="n">content</span> <span class="si">= }</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="n">example_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;чем-то&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">example_list</span><span class="o">.</span><span class="n">content</span> <span class="si">= }</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">example_list</span><span class="p">)</span> <span class="si">= }</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="c1"># и для Int</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">Int</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">Int</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-
-<span class="n">a</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;После простого сложения: </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">value</span> <span class="si">= }</span><span class="s2">, </span><span class="si">{</span><span class="n">b</span><span class="o">.</span><span class="n">value</span> <span class="si">= }</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;После записи в переменную результата: </span><span class="si">{</span><span class="n">c</span><span class="o">.</span><span class="n">value</span> <span class="si">= }</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">abs_res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">abs_res</span> <span class="si">= }</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>example_list.content = [&#39;что-то&#39;, &#39;с&#39;]
-example_list.content = [&#39;что-то&#39;, &#39;с&#39;, &#39;чем-то&#39;]
-type(example_list) = &lt;class &#39;__main__.List&#39;&gt;
-После простого сложения: a.value = 3, b.value = 4
-После записи в переменную результата: c.value = 7
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np_example_array.shape = (3,)
+abs_res = 2
 </pre></div>
 </div>
 </div>
 </div>
-<p>Что важно заметить и отметить в этом примере:</p>
-<ol class="simple">
-<li><p>Как объявить класс? С помощью ключевого слова <code class="docutils literal notranslate"><span class="pre">class</span></code>, указания названия класса (таким образом создается новый тип данных) и перечисления методов:</p></li>
-</ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ИмяКласса</span><span class="p">:</span>
-    <span class="o">&lt;</span><span class="n">код_тела_класса</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<ol class="simple">
-<li><p>Обязательно определить метод <code class="docutils literal notranslate"><span class="pre">__init__</span></code>. Это метод, вызываемый при создании нового объекта класса и отвечающий за определение его контента. В нем через запятую, как и в обычной функции, перечислить необходимые переменные и, по возможности, их значения по умолчанию;</p></li>
-<li><p>Каждый метод должен первым аргументом принимать <strong>экземпляр объекта</strong> (по соглашению он называется <code class="docutils literal notranslate"><span class="pre">self</span></code>). При этом при вызове метода Python автоматически подставит сам объект, делать это руками не нужно. По сути под капотом происходит следующее:</p></li>
-</ol>
+<p>По сути обращение схоже с объявлением объекта класса или же каким то методом - ведь можно импортировать не целый пакет, а его часть!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># вызываем метод класса - не объекта! - и передаем первым аргументом объект,</span>
-<span class="c1"># который при обычных обстоятельствах будет записан в self</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">Int</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Int</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">Int</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">zeros</span>
+
+<span class="n">zeros_matrix</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">zeros_matrix</span> <span class="si">= }</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zeros_matrix = array([[0., 0., 0.]])
 </pre></div>
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p><strong>Атрибутом называется переменная, хранящаяся в экземпляре класса</strong>;</p></li>
-<li><p>В рамках методов атрибуты объекта доступны с использованием ключевого слова <code class="docutils literal notranslate"><span class="pre">self</span></code>. К примеру, <code class="docutils literal notranslate"><span class="pre">self.data</span></code>;</p></li>
-<li><p>Вне методов атрибуты доступны у экземпляров через точку: <code class="docutils literal notranslate"><span class="pre">some_object.attr_name</span></code>;</p></li>
-<li><p>Для создания объекта класса нужно указать имя класса (типа) и передать аргументы: <code class="docutils literal notranslate"><span class="pre">Int(3)</span></code> - как раз оно;</p></li>
-<li><p>Методы как могут возвращать что-либо (в том числе новый объект того же класса), так и ничего не возвращать.</p></li>
-</ol>
-<p>В заключение еще одна картинка, иллюстрирующая суть класса, экземпляра, атрибутов и методов:</p>
-<div class="figure align-default" id="class-and-obj-pika">
-<a class="reference internal image-reference" href="../../_images/class_and_obj_pika.png"><img alt="../../_images/class_and_obj_pika.png" src="../../_images/class_and_obj_pika.png" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-text">Who’s that pokemon?</span><a class="headerlink" href="#class-and-obj-pika" title="Permalink to this image">¶</a></p>
+<p>Здесь <code class="docutils literal notranslate"><span class="pre">zeros</span></code> - <strong>функция</strong>, формирующая матрицу из нулей заданного размера.</p>
+<p>Или, к примеру, для отрисовки визуализаций часто используют следующую библиотеку (мы уже с ней сталкивались):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/python_l10_5_0.png" src="../../_images/python_l10_5_0.png" />
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>В коде выше в последних двух строчках стоит <code class="docutils literal notranslate"><span class="pre">;</span></code>. Это необязательный символ, означающий конец команды. В большинстве других языков программирования необходимо всегда в конце строки оставлять этот символ, однако в питоне сигналом о конце инстуркции служит перенос строки.
+Почему же здесь они поставлены? Во-первых, чтобы показать, что они означают – чтоб вы не переживали, когда встретите подобное. Во-вторых, <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> возвращает объект после вызова метода. <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code> же по умолчанию выводит последнее возвращенное значение. Попробуйте убрать точку с запятой и посмотреть в своем ноутбуке, что выйдет. Таким образом, в данном случае окончание команды <code class="docutils literal notranslate"><span class="pre">;</span></code> говорит, что возвращаемая переменная никуда не будет записана и будет удалена - поэтому при ее наличии подпись объекта не возвращается.</p>
+</div>
+<p>В коде сначала происходит импорт, затем вызывается отрисовка точек (см. <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html?highlight=scatter#matplotlib.pyplot.scatter">документацию тут</a>), где координаты <code class="docutils literal notranslate"><span class="pre">X</span></code> и <code class="docutils literal notranslate"><span class="pre">Y</span></code> получаются случайно из нормального распределения от <code class="docutils literal notranslate"><span class="pre">-1</span></code> до <code class="docutils literal notranslate"><span class="pre">1</span></code>. Но сам по себе вызов <code class="docutils literal notranslate"><span class="pre">scatter()</span></code> лишь добавляет точки на график, но не отрисовывает его - за это отвечает вызов <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code>. Стоит заметить, что <code class="docutils literal notranslate"><span class="pre">plt</span></code> хранит в себе “полотно”, на котором рисует, и результат добавления точек через <code class="docutils literal notranslate"><span class="pre">scatter</span></code> не нужно записывать в какую-либо переменную – все это хранится во внутреннем состоянии самой библиотеки. Помните урок про классы и их объекты, задающие состояние системы? Здесь ровно то же самое! Более того, аналогичный функционал будет у библиотеки для квантовых вычислений, с которой вы познакомитесь далее по курсу (под алиасом <code class="docutils literal notranslate"><span class="pre">qml</span></code>). Теперь, надеемся, картинка начинает складываться!</p>
 </div>
 <div class="section" id="id5">
-<h2>Пример использования для хранения состояние<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<p>В курсе будет встречаться подобный паттерн, поэтому хочется остановиться поподробнее. Допустим, есть некоторая среда, заданная состоянием, и есть объекты, существующие в этой среде, как-то взаимодействующие между собой (и со средой). Есть набор функций, который осуществляет эти взаимодействия. Тогда удобно ввести некоторый объект <code class="docutils literal notranslate"><span class="pre">system</span></code>  класса <code class="docutils literal notranslate"><span class="pre">System</span></code>, который хранит эту информацию, и передавать его как параметр в методы расчета чего-либо (никакой конкретной логики тут не заложено, не пытайтесь понять, за что отвечает <code class="docutils literal notranslate"><span class="pre">alpha</span></code> и прочие переменные - пример абстрактный):</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># класс системы, с ее параметрами и состоянием</span>
-<span class="k">class</span> <span class="nc">System</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param_vector</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">multiplier</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">energy</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">param_vector</span> <span class="o">=</span> <span class="n">param_vector</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">gamma</span> <span class="o">=</span> <span class="n">gamma</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">multiplier</span> <span class="o">=</span> <span class="n">multiplier</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="n">energy</span>
-
-        <span class="c1"># начальное состояние</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">system_state</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="p">(</span><span class="n">alpha</span> <span class="o">-</span> <span class="n">gamma</span><span class="p">)</span> <span class="o">*</span> <span class="n">multiplier</span> <span class="o">*</span> <span class="n">param</span>
-            <span class="k">for</span> <span class="n">param</span>
-            <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">param_vector</span>
-        <span class="p">]</span>
-
-    <span class="k">def</span> <span class="nf">first_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span>
-        <span class="c1"># взаимодействие с одним объектом: увеличение энергии, изменение состояния системы</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">gamma</span> <span class="o">-=</span> <span class="nb">object</span><span class="o">.</span><span class="n">energy</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">energy</span> <span class="o">+=</span> <span class="nb">object</span><span class="o">.</span><span class="n">energy</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">system_state</span> <span class="o">=</span> <span class="p">[</span><span class="n">param</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">energy</span> <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">system_state</span><span class="p">]</span>
-
-    <span class="k">def</span> <span class="nf">second_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">list_of_object</span><span class="p">):</span>
-        <span class="c1"># взаимодействие с несколькими объектами - увеличение их энергии</span>
-        <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">list_of_object</span><span class="p">:</span>
-            <span class="n">obj</span><span class="o">.</span><span class="n">energy</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gamma</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">multiplier</span>
-
-<span class="k">class</span> <span class="nc">Object</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">energy</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">):</span>
-        <span class="c1"># объект хранит только один атрибут</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="n">energy</span>
-
-<span class="c1"># симуляция одного цикла в системе</span>
-<span class="k">def</span> <span class="nf">one_system_cycle</span><span class="p">(</span><span class="n">system</span><span class="p">:</span> <span class="n">System</span><span class="p">,</span> <span class="n">objects</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">objects</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">system</span><span class="o">.</span><span class="n">second_action</span><span class="p">(</span><span class="n">objects</span><span class="p">)</span>
-        <span class="c1"># убираем один последний объект</span>
-        <span class="n">objects</span> <span class="o">=</span> <span class="n">objects</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">objects</span> <span class="o">=</span> <span class="p">[</span><span class="n">Object</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
-        <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">objects</span><span class="p">:</span>
-            <span class="n">system</span><span class="o">.</span><span class="n">first_action</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">objects</span>
-
-<span class="n">params</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.15</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
-<span class="n">alpha</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.18</span>
-<span class="n">system</span> <span class="o">=</span> <span class="n">System</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">energy</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
-
-<span class="c1"># изначально объектов нет, они появятся после первого цикла</span>
-<span class="n">objects</span> <span class="o">=</span> <span class="kc">None</span>
-
-<span class="k">for</span> <span class="n">cycle_num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Состояние системы на итерации </span><span class="si">{</span><span class="n">cycle_num</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">system</span><span class="o">.</span><span class="n">system_state</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">objects</span> <span class="o">=</span> <span class="n">one_system_cycle</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">objects</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Всего объектов: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">objects</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
-
-    <span class="n">total_object_energy</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">obj</span><span class="o">.</span><span class="n">energy</span> <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">objects</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Суммарная энергия объектов: </span><span class="si">{</span><span class="n">total_object_energy</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
+<h2>Блок дополнительных ссылок<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>Ниже представлен набор ссылок, которые предлагается просмотреть для расширения кругозора и лучшего понимания материала. Это бонусный материал, необязательный к изучению. Но если вас захватила идея получше познакомится со своим инструментом, то почему нет?</p>
+<ol class="simple">
+<li><p><a class="reference external" href="https://github.com/trekhleb/learn-python">Курс по Python</a> в виде примеров кода с очевидными и не очень механиками языка. Хорошо подойдет как дополнение к примерам в курсе;</p></li>
+<li><p><a class="reference external" href="https://realpython.com/">realpython</a> – сайт с большим количеством разнообразных уроков по <code class="docutils literal notranslate"><span class="pre">Python</span></code> на английском;</p></li>
+<li><p><a class="reference external" href="https://github.com/kirang89/pycrumbs">Огромный список</a> ссылок на разные статьи по всем темам - от основ <code class="docutils literal notranslate"><span class="pre">Python</span></code> и до продвинутых приемов в разработке;</p></li>
+<li><p><a class="reference external" href="https://github.com/vinta/awesome-python">И другой</a> – с набором ссылок на код разных программ. Игры, видеопроигрыватели и прочее - все тут;</p></li>
+<li><p><a class="reference external" href="https://github.com/alexmojaki/snoop">Простой отладчик</a> на случай, если начали путаться в своем коде, а продвинутые инструменты кажутся очень сложными и громоздкими.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Как ставить новые библиотеки в <code class="docutils literal notranslate"><span class="pre">Python</span></code> – вот хотя бы тот же отладчик из пункта 5? Вспоминайте совет – гугл ваш лучший друг. “how to install python library” (да, прямо дословно library = библиотека) – и вы на коне!</p>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Состояние системы на итерации 1: [9.64, 28.92, 40.00600000000001, 0.0].	Всего объектов: 5	Суммарная энергия объектов: 10
-Состояние системы на итерации 2: [-340.36, -321.08, -309.994, -350.0].	Всего объектов: 4	Суммарная энергия объектов: -72.56
-Состояние системы на итерации 3: [-340.36, -321.08, -309.994, -350.0].	Всего объектов: 3	Суммарная энергия объектов: -114.84
-</pre></div>
-</div>
-</div>
-</div>
-<p>Обратите внимание на то, что функция <code class="docutils literal notranslate"><span class="pre">one_system_cycle</span></code> не возвращает <code class="docutils literal notranslate"><span class="pre">system</span></code> - ведь мы прямо во время итераций меняем ее состояние, и в последующие моменты времени эти изменения сохраняются, то есть состояние остается. Таким образом, эту систему (среду) - а именно объект, экземпляр класса <code class="docutils literal notranslate"><span class="pre">System</span></code> - как параметр <strong>можно передавать в десятки функций, и каждая из них будет видеть актуальное состояние</strong>.</p>
 </div>
 <div class="section" id="id6">
-<h2>Что мы узнали из лекции<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Объекты одного класса отличаются между собой атрибутами, которые придают уникальности;</p></li>
-<li><p>Методы классов позволяют описывать логику взаимодействия, <strong>обновлять состояние</strong>;</p></li>
-<li><p>Для объявления класса нужно определить <strong>как минимум один метод</strong> <code class="docutils literal notranslate"><span class="pre">__init__</span></code>;</p></li>
-<li><p>Классы без методов можно использовать как <strong>удобное хранилище разнородной информации</strong> о схожих объектах (описать разных студентов и их оценки).</p></li>
-</ul>
-<p>Это далеко не все, что можно написать по теме классов и объектов, однако это тот необходимый минимум, что потребуется для прохождения курса. Больше примеров и деталей можно найти, например, по ссылкам: <a class="reference external" href="https://younglinux.info/oopython/ooprogramm">пример с несколькими взаимодействующими объектами</a>, <a class="reference external" href="https://younglinux.info/oopython/inheritance">что такое наследование и зачем оно нужно</a>.</p>
+<h2>Вместо заключения<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>Что ж, вот и подошел к концу первый блок курса. Его можно назвать самым сложным – нет, не с точки зрения материала и его научности, но по количеству усилий, которые необходимо приложить, чтобы не сбиться с пути и продолжить обучение несмотря на трудности. Именно тут большая часть людей машет рукой и закрывает курс. Если ты, дорогой студент, читаешь это, то мы безумно рады за твои достижения и подвиги, и желаем дальнейших успехов в прохождении курса!</p>
+<div class="figure align-default" id="cats-show-love-differently">
+<a class="reference internal image-reference" href="../../_images/cats_show_love_differently.jpeg"><img alt="../../_images/cats_show_love_differently.jpeg" src="../../_images/cats_show_love_differently.jpeg" style="width: 350px;" /></a>
+</div>
 </div>
 </div>
 
@@ -741,6 +680,24 @@ type(example_list) = &lt;class &#39;__main__.List&#39;&gt;
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="python_l9.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Объекты, классы и методы</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../mlblock/ml_intro.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">О блоке</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         
