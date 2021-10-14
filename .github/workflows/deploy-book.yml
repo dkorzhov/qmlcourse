@@ -64,12 +64,11 @@ jobs:
       - name: Install dependencies
         run: |
           poetry install
-          conda install psi4=1.4rc3 python=3.8 -c psi4/label/dev -y
-          poetry run psi4 --test
-
 
       - name: Build the book
         run: |
+          conda install psi4=1.4rc3 python=3.8 -c psi4/label/dev -y
+          poetry run psi4 --test        
           poetry run jupyter-book build ./qmlcourseRU
 
       - name: Archive code results
