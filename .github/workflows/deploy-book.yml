@@ -33,10 +33,10 @@ jobs:
           cp -r ./gh-pages/_build/ ./qmlcourseRU/ || exit 0
 
       # Install dependencies
-      - name: Set up Python 3.8
+      - name: Set up Python 3.7
         uses: actions/setup-python@v2.2.2
         with:
-          python-version: 3.8
+          python-version: 3.7
 
       - name: Set up poetry
         uses: snok/install-poetry@v1.1.6
@@ -49,7 +49,7 @@ jobs:
         uses: s-weigand/setup-conda@v1
         with:
           update-conda: true
-          python-version: 3.8
+          python-version: 3.7
           conda-channels: anaconda, conda-forge
 
       - run: conda install psi4=1.4rc3 python=3.8 -c psi4/label/dev -y          
