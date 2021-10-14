@@ -44,6 +44,14 @@ jobs:
           virtualenvs-create: true
           virtualenvs-in-project: true
 
+      # Test setup conda
+      - name: Setup conda
+        uses: s-weigand/setup-conda@v1
+        with:
+          update-conda: true
+          python-version: 3.8
+          conda-channels: anaconda, conda-forge
+
       #Use cache
       - name: Copy cache dir for dependecies
         uses: actions/cache@v2
