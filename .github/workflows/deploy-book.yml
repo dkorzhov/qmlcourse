@@ -64,6 +64,7 @@ jobs:
       - name: Install dependencies
         run: |
           poetry install
+          poetry add ipykernel
 
       - name: Build the book
         run: |
