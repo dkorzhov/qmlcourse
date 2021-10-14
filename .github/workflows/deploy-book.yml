@@ -61,6 +61,12 @@ jobs:
         run: |
           poetry run jupyter-book build ./qmlcourseRU
 
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-report
+          path: ./qmlcourseRU/_build/html/reports/*
+
       # Push the book's HTML to github-pages
       - name: GitHub Pages action
         uses: peaceiris/actions-gh-pages@v3.8.0
