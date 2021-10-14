@@ -1,0 +1,17 @@
+import numpy as np
+
+np_example_array = np.array([1,2,3])
+print(f"{np_example_array.shape = }")
+
+abs_res = np.abs(-2)
+print(f"{abs_res = }")
+
+from numpy import zeros
+
+zeros_matrix = zeros(shape=(1, 3))
+print(f"{zeros_matrix = }")
+
+import matplotlib.pyplot as plt
+
+plt.scatter(np.random.randn(10), np.random.randn(10));
+plt.show();

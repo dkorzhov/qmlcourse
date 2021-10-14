@@ -1,0 +1,122 @@
+# разные способы объявления списков
+first_list = []
+second_list = list()
+third_list = list([1,2, "stroka", 3.14])
+fourth_lust = [15, 2.2, ["another_list", False]]
+
+print(type(second_list), type(fourth_lust))
+print(first_list, fourth_lust)
+
+# базовый журнал с тремя оценками
+math_journal = [3, 3, 5]
+
+# добавим новопришедших студентов
+math_journal.append(4)
+math_journal.append(5)
+
+# и сразу большую группу новых студентов
+math_journal.extend([2,3,4,5,5])
+
+print(f"{math_journal = }")
+
+# найдем среднюю оценку как сумму всех оценок, деленную на их количество
+avg_grade = sum(math_journal) / len(math_journal)
+print(f"{avg_grade = }")
+
+# базовый журнал с пятью оценками
+math_journal = [1, 2, 3, 4, 5]
+
+third_student_grade = math_journal[3]
+print(third_student_grade)
+
+# базовый журнал с пятью оценками
+math_journal = [1, 2, 3, 4, 5]
+
+# возьмем последнюю оценку
+last_grade = math_journal[-1]
+print(f"Последняя оценка: {last_grade}")
+
+# а теперь -- предпоследнюю
+prev = math_journal[-2]
+print(f"Предпоследняя оценка: {prev}")
+
+# конечно, взятие по индексам можно использовать в ранее разобранном синтаксисе
+
+if math_journal[-1] < math_journal[-2]:
+    math_journal[-1] += 1
+    print("Последняя оценка меньше предпоследней. Натянем студенту?")
+else:
+    math_journal[-2] = 2
+    print("Последний студент сдал очень хорошо, на его фоне предпоследний просто двоечник!")
+
+# базовый журнал с пятью оценками
+math_journal = [1, 2, 3, 4, 5]
+
+# как взять первые 3 оценки?
+first_3_grades = math_journal[:3]
+print(f"{first_3_grades = }")
+
+# как взять последние две оценки?
+last_2_grades = math_journal[-2:]
+print(f"{last_2_grades = }")
+
+# сделаем срез на 4 оценки, начиная со второй (с индексом 1)
+start_index = 1
+some_slice = math_journal[start_index : start_index + 4]
+print(f"{some_slice = }")
+
+# возьмем столько объектов из начала, сколько объектов в some_slice
+yet_another_slice = math_journal[:len(some_slice)]
+
+# а вот так можно проверить, попадает ли объект в список
+print("Верно ли, что единица входит в some_slice? {1 in some_slice}")
+print("Верно ли, что единица входит в yet_another_slice? {1 in yet_another_slice}")
+
+math_journal = [3, 4, 5]
+counter = 0
+
+for cur_grade in math_journal:
+    if cur_grade >= 4:
+        counter += 1
+
+print(f"Всего хорошистов и отличников по математике {counter} человека")
+
+math_journal = [3, 4, 5]
+counter = 0
+
+cur_grade = math_journal[0]
+if cur_grade >= 4:
+    counter += 1
+
+# не забываем менять индекс с 0 на 1, так как каждый раз берется следующий элемент
+cur_grade = math_journal[1]
+if cur_grade >= 4:
+    counter += 1
+
+# и с единицы на двойку
+cur_grade = math_journal[2]
+if cur_grade >= 4:
+    counter += 1
+
+print(f"Всего хорошистов и отличников по математике {counter} человека")
+
+math_journal = [4, 3, 4, 5, 5, 2, 3, 4]
+good_student_indexes = []
+
+for student_index in range(len(math_journal)):
+    curent_student_grade = math_journal[student_index]
+    if curent_student_grade >= 4:
+        good_student_indexes.append(student_index)
+
+print(f"Преуспевающие по математике студенты находятся на позициях: {good_student_indexes}")
+
+# грубый вариант
+inp_list = [1,4,6,8]
+out_list = []
+
+for item in inp_list:
+    out_list.append(str(item))
+
+# list comprehension
+out_list = [str(item) for item in inp_list]
+print(out_list)

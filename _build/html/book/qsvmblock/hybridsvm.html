@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -74,6 +74,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../../_static/logo.svg" class="logo" alt="logo">
       
@@ -846,8 +850,8 @@ K(x, y) = e^{-\frac{||x - y||^2}{\sigma}}
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/work/qmlcourse/qmlcourse/.venv/lib/python3.8/site-packages/pennylane/utils.py:351: UserWarning: Use of qml.inv() is deprecated and should be replaced with qml.adjoint().
-  warnings.warn(
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/work/qmlcourse/qmlcourse/.venv/lib/python3.7/site-packages/pennylane/utils.py:353: UserWarning: Use of qml.inv() is deprecated and should be replaced with qml.adjoint().
+  UserWarning,
 </pre></div>
 </div>
 </div>
@@ -860,8 +864,8 @@ K(x, y) = e^{-\frac{||x - y||^2}{\sigma}}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 0: ──H──Rϕ(1)──────H──╭C───────────╭C──╭C─────────────╭C──H──Rϕ(0.0782)──H──╭┤ Probs 
- 1: ──H──Rϕ(0.333)──H──╰X──Rϕ(1.6)──╰X──╰X──Rϕ(-1.95)──╰X──H──Rϕ(-0.899)──H──╰┤ Probs 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 0: ──H──Rϕ(-0.196)──H──╭C────────────╭C──╭C─────────────╭C──H──Rϕ(0.911)───H──╭┤ Probs 
+ 1: ──H──Rϕ(-0.478)──H──╰X──Rϕ(2.74)──╰X──╰X──Rϕ(-1.82)──╰X──H──Rϕ(-0.333)──H──╰┤ Probs 
 </pre></div>
 </div>
 </div>
@@ -978,7 +982,7 @@ K(x, y) = e^{-\frac{||x - y||^2}{\sigma}}
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
