@@ -70,7 +70,7 @@ jobs:
 
       - name: Build PDF file
         run: |
-          poetry run jupyter-book build ./qmlcourseRU --builder pdfhtml
+          poetry run jupyter-book build ./qmlcourseRU --builder pdflatex
           mv ./qmlcourseRU/_build/pdf/book.pdf ./qmlcourseRU/_build/pdf/all_book.pdf
 
       - name: Deploy only pdf files
