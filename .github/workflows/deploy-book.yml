@@ -70,7 +70,7 @@ jobs:
 
       - name: Build PDF file
         run: |
-          poetry run jupyter-book build ./qmlcourseRU --builder latex
+          poetry run jupyter-book build ./qmlcourseRU --builder uplatex
           find ./ -name "*.tex"
 
       - name: Deploy only pdf files
