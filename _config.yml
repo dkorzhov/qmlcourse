@@ -26,8 +26,6 @@ notebook_interface: "notebook"
 #   path_to_book: "qmlcourseRU"
 
 latex:
-  latex_engine: pdflatex
-  use_jupyterbook_latex: true
   latex_documents:
     targetname: qmlcourseRU.tex
 
