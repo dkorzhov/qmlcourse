@@ -70,8 +70,10 @@ jobs:
 
       - name: Build PDF file
         run: |
-          poetry run jupyter-book build ./qmlcourseRU --builder uplatex
-          find ./ -name "*.tex"
+          sudo apt-get install -y texlive-latex-recommended texlive-latex-extra \
+                     texlive-fonts-recommended texlive-fonts-extra \
+                     texlive-xetex latexmk
+          poetry run jupyter-book build ./qmlcourseRU --builder pdflatex
 
       - name: Deploy only pdf files
         uses: peaceiris/actions-gh-pages@v3
