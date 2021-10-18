@@ -62,7 +62,7 @@ jobs:
           poetry run jupyter-book build ./qmlcourseRU
 
       - run: |
-          find / -name "qmlcourseRU.tex"
+          find ./ -name "qmlcourseRU.tex"
 
       # Push the book's HTML to github-pages
       - name: GitHub Pages action
