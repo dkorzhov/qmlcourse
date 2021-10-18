@@ -59,6 +59,7 @@ jobs:
 
       - name: Build the book
         run: |
+          poetry run jupyter-book toc migrate ./qmlcourseRU/_toc.yml -o ./qmlcourseRU/_toc.yml
           poetry run jupyter-book build ./qmlcourseRU
 
       # Push the book's HTML to github-pages
