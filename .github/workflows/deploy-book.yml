@@ -62,7 +62,7 @@ jobs:
           poetry run jupyter-book build ./qmlcourseRU
 
       - run: |
-          find ./ -name "qmlcourseRU.tex"
+          find ./ -name "*.tex"
 
       # Push the book's HTML to github-pages
       - name: GitHub Pages action
@@ -73,7 +73,7 @@ jobs:
 
       - name: Build PDF file
         run: |
-          poetry run jupyter-book build ./qmlcourseRU --builder pdflatex
+          poetry run jupyter-book build ./qmlcourseRU --builder pdfhtml
           mv ./qmlcourseRU/_build/pdf/book.pdf ./qmlcourseRU/_build/pdf/all_book.pdf
 
       - name: Deploy only pdf files
