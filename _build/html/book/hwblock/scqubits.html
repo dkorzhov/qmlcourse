@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,19 +33,19 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -75,6 +75,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../../_static/logo.svg" class="logo" alt="logo">
       
       
@@ -93,7 +97,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Введение
  </span>
@@ -110,7 +114,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Основы Python
  </span>
@@ -172,7 +176,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Основы машинного обучения
  </span>
@@ -189,7 +193,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Квантовые вычисления
  </span>
@@ -226,7 +230,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Железо квантовых компьютеров
  </span>
@@ -248,7 +252,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Фреймворки
  </span>
@@ -270,7 +274,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Вариационные схемы
  </span>
@@ -287,7 +291,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Квантовые градиенты
  </span>
@@ -309,7 +313,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Квантовый SVM
  </span>
@@ -326,7 +330,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Квантовые нейронные сети
  </span>
@@ -343,7 +347,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Проблемы квантового машинного обучения
  </span>
@@ -360,7 +364,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   О курсе
  </span>
@@ -524,12 +528,12 @@
         
               <div>
                 
-  <div class="section" id="scqubits">
+  <div class="tex2jax_ignore mathjax_ignore section" id="scqubits">
 <span id="id1"></span><h1>Сверхпроводниковые кубиты<a class="headerlink" href="#scqubits" title="Permalink to this headline">¶</a></h1>
 <p>Сверхпроводниковые кубиты относятся к
 наиболее успешным типам кубитов для квантовых вычислений и симуляции на сегодняшний день. Google впервые
 продемонстрировала квантовое превосходство на квантовом процессоре из 53 сверхпроводниковых кубитов-трансмонов
-<span id="id2">[<a class="reference internal" href="../bibliography.html#id10"><span>AAB+19</span></a>]</span>. Кроме Google, сверхпроводниковые кубиты используют IBM (в том числе для своего открытого облачного
+<span id="id2">[<a class="reference internal" href="../bibliography.html#id10">AAB+19</a>]</span>. Кроме Google, сверхпроводниковые кубиты используют IBM (в том числе для своего открытого облачного
 проекта IBM Quantum Experience), Riggetti Computing и другие крупные фирмы и лаборатории по всему миру.</p>
 <div class="figure align-default" id="two-qubit-quantum-processor">
 <img alt="../../_images/two-qubit-chip.svg" src="../../_images/two-qubit-chip.svg" /><p class="caption"><span class="caption-number">Fig. 72 </span><span class="caption-text">Фотографии, изображения со сканирующего электронного микроскопа и эквивалентная электрическая схема микросхемы
@@ -541,7 +545,7 @@
 <div class="section" id="id3">
 <h2>Квантование электрических цепей<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>Электрические цепи, как и любые другие физические объекты, могут быть описаны с помощью законов квантовой механики
-<span id="id4">[<a class="reference internal" href="../bibliography.html#id13"><span>VD17</span></a>]</span>. Для этого следует начать с гамильтонового описания, например с помощью функции Лагранжа.
+<span id="id4">[<a class="reference internal" href="../bibliography.html#id13">VD17</a>]</span>. Для этого следует начать с гамильтонового описания, например с помощью функции Лагранжа.
 Энергия всей физической системы (электрической цепи) должна быть записана в виде суммы энергий, накопленных ее
 составными частями (сосредоточенных элементов), выраженной через динамическое переменные системы и их производные.
 Самые простые электрические элементы, такие как конденсаторы и индукторы, запасают энергию <span class="math notranslate nohighlight">\(E_C\)</span> и <span class="math notranslate nohighlight">\(E_L\)</span> в электрическом
@@ -670,7 +674,7 @@ L_J=\frac{1}{\frac{\partial^2 E}{\partial \Phi^2}} =
 <div class="figure align-default" id="transmon-electric-circuit">
 <img alt="../../_images/Transmon.svg" src="../../_images/Transmon.svg" /><p class="caption"><span class="caption-number">Fig. 74 </span><span class="caption-text">Электрическая схема трансмона. <span class="math notranslate nohighlight">\(I_c\)</span> – критический ток контакта, <span class="math notranslate nohighlight">\(C_S\)</span> – шунтриующая емкость, <span class="math notranslate nohighlight">\(C_J\)</span> – емкость контакта</span><a class="headerlink" href="#transmon-electric-circuit" title="Permalink to this image">¶</a></p>
 </div>
-<p>Самый простой, и в то же время один самых успешных видов сверхпроводниковых кубитов – это трансмон<span id="id7">[<a class="reference internal" href="../bibliography.html#id14"><span>KYG+07</span></a>]</span>.
+<p>Самый простой, и в то же время один самых успешных видов сверхпроводниковых кубитов – это трансмон<span id="id7">[<a class="reference internal" href="../bibliography.html#id14">KYG+07</a>]</span>.
 Трансмон представляет собой ангармонический осциллятор на основе наноразмерного джозефсоновского контакта, шунтированного
 емкостью. Такая цепь хорошо известна в
 сверхпроводниковой электронике, а ее резонансная частота называется плазменной частотой:
@@ -715,7 +719,7 @@ L_J=\frac{1}{\frac{\partial^2 E}{\partial \Phi^2}} =
 <div class="section" id="id8">
 <h2>Считывание<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <p>Считывание состояния кубита в сверхпроводящих цепях, как правило, осуществляется методом дисперсионного считывания
-<span id="id9">[<a class="reference internal" href="../bibliography.html#id15"><span>WSB+05</span></a>]</span>. В основе дисперсионного считывания состояния сверхпроводниковых кубитов стоит архитектура квантовой
+<span id="id9">[<a class="reference internal" href="../bibliography.html#id15">WSB+05</a>]</span>. В основе дисперсионного считывания состояния сверхпроводниковых кубитов стоит архитектура квантовой
 электродинамики в электрической цепи, в которой сверхпроводниковый кубит связан с микроволновым
 резонатором. Концепция квантовой электродинамики в электрической цепи возникла по аналогии с квантовой электродинамикой
 в полости, где уединенный атом помещается в оптическую полость, которая выступает в роли резонатора. Взаимодействие
@@ -1015,7 +1019,7 @@ I_{\mathrm{C SQUID}}(\Phi_x) = \sqrt{\left(I_{\mathrm{Cc1}} + I_{\mathrm{Cc2}}\r
 \sim \Omega\left(\hat{a}^\dagger + \hat{a}\right)\left(\hat{b}^\dagger + \hat{b}\right).
 \]</div>
 <p>Мы не будем здесь подробно рассматривать природу этого слагаемого; подробнее об этом можно почитать, например,
-в работе <span id="id13">[<a class="reference internal" href="../bibliography.html#id16"><span>RGM+17</span></a>]</span>. Ограничимся тем, что это взаимодействие является поперечным, то есть <span class="math notranslate nohighlight">\(xx\)</span>-взаимодействием.
+в работе <span id="id13">[<a class="reference internal" href="../bibliography.html#id16">RGM+17</a>]</span>. Ограничимся тем, что это взаимодействие является поперечным, то есть <span class="math notranslate nohighlight">\(xx\)</span>-взаимодействием.
 Если модулировать поток в СКВИДе в резонансе с разностью частот между кубитами
 (<span class="math notranslate nohighlight">\(n \omega_m = \omega_1 - \omega_2\)</span>, где <span class="math notranslate nohighlight">\(n\)</span> – номер гармоники), то возбуждение с одного кубита будет
 переходить на другой, и обратно.</p>
@@ -1042,7 +1046,7 @@ IBM Quantum Experience – при помощи кросс-резонансных
 <h2>Что почитать для дальнейшего изучения вопроса?<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://qiskit.org/learn/intro-qc-qh/">Introduction to Quantum Computing and Quantum Hardware</a></p></li>
-<li><p><a class="reference external" href="https://arxiv.org/abs/1904.06560">A Quantum Engineer’s Guide to Superconducting Qubits</a> <span id="id15">[<a class="reference internal" href="../bibliography.html#id17"><span>KKY+19</span></a>]</span></p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/1904.06560">A Quantum Engineer’s Guide to Superconducting Qubits</a> <span id="id15">[<a class="reference internal" href="../bibliography.html#id17">KKY+19</a>]</span></p></li>
 </ul>
 </div>
 </div>
@@ -1099,7 +1103,7 @@ IBM Quantum Experience – при помощи кросс-резонансных
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

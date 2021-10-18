@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,19 +33,19 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -75,6 +75,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../../_static/logo.svg" class="logo" alt="logo">
       
       
@@ -93,7 +97,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Введение
  </span>
@@ -110,7 +114,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Основы Python
  </span>
@@ -172,7 +176,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Основы машинного обучения
  </span>
@@ -189,7 +193,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Квантовые вычисления
  </span>
@@ -226,7 +230,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Железо квантовых компьютеров
  </span>
@@ -248,7 +252,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Фреймворки
  </span>
@@ -270,7 +274,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Вариационные схемы
  </span>
@@ -287,7 +291,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Квантовые градиенты
  </span>
@@ -309,7 +313,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Квантовый SVM
  </span>
@@ -326,7 +330,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Квантовые нейронные сети
  </span>
@@ -343,7 +347,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Проблемы квантового машинного обучения
  </span>
@@ -360,7 +364,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   О курсе
  </span>
@@ -583,7 +587,7 @@
         
               <div>
                 
-  <div class="section" id="quantchemadvancedscf">
+  <div class="tex2jax_ignore mathjax_ignore section" id="quantchemadvancedscf">
 <span id="id1"></span><h1>Квантовая химия. Теория самосогласованного поля.<a class="headerlink" href="#quantchemadvancedscf" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id2">
 <h2>Описание лекции<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
@@ -657,7 +661,7 @@
 <p>А зачем нам вообще сдался спектр и энергии? Вслед за физиками двадцатого века нам приходится продираться через дебри уравнений, абстракций и формул. Дело это непростое и может возникнуть резонный вопрос – а зачем оно все надо?</p>
 <p>Помимо фундаментальной ценности в виде лучшего понимания устройства мира, объясняющая спектр теория дает крутую возможность: по измеренному спектру понять, что за вещество перед нами и какие процессы в нем протекают. Например, изучение спектров – один из немногих способов узнать что-то про процессы в звездах или биологических клетках. Для совсем практиков: спектроскопия также используется для детекции взрывчатых и наркотических веществ в малых дозах, а полевые транзисторы (основа большинства современных вычислительные устройства) работают на основе туннельного эффекта – квантового явления. Так что можно сказать, что квантовая механика используется сплошь и рядом!</p>
 </div>
-<p>Если мы перейдем в уравнении Х в сферические координаты со следующей параметризацией <span class="math notranslate nohighlight">\(\ket{\Psi(\vec{r})} = \frac{\chi(r)}{r} Y(\theta, \phi)\)</span> и воспользуемся несколькими волшебными выводами квантмеха <span id="id8">[<a class="reference internal" href="../bibliography.html#id6"><span>89</span></a>]</span>, то получим:</p>
+<p>Если мы перейдем в уравнении Х в сферические координаты со следующей параметризацией <span class="math notranslate nohighlight">\(\ket{\Psi(\vec{r})} = \frac{\chi(r)}{r} Y(\theta, \phi)\)</span> и воспользуемся несколькими волшебными выводами квантмеха <span id="id8">[<a class="reference internal" href="../bibliography.html#id6">89</a>]</span>, то получим:</p>
 <p><span class="math notranslate nohighlight">\(
 -\frac{{\hbar}^2}{2 m} \frac{d^2 \chi}{d r^2} +
 (-\frac{e^2}{r} + \frac{\hbar^2 \ell (\ell + 1)}{2mr^2} -E) \chi(r) = 0
@@ -668,7 +672,7 @@
 (\frac{\ell(\ell+1)}{2r^2} -\frac{1}{r})\chi(r)
 = 0
 \)</span></p>
-<p>Опустим несколько страниц выкладок <span id="id9">[<a class="reference internal" href="../bibliography.html#id5"><span>15</span></a>]</span>, учтем граничные условия и получим следующее решение:</p>
+<p>Опустим несколько страниц выкладок <span id="id9">[<a class="reference internal" href="../bibliography.html#id5">15</a>]</span>, учтем граничные условия и получим следующее решение:</p>
 <p><span class="math notranslate nohighlight">\(
  R_{n\ell}(r) = r^\ell \cdot e^{-r/n} \cdot \sum_{k=0}^{n -\ell -1} \frac{(-2r/n)^k}{ (2\ell + 2 +k)! (n-\ell-k-1)! k!} \cdot C
 \)</span></p>
@@ -780,7 +784,7 @@ E_{n} = -\frac{1}{n^2} \frac{me^4}{2\hbar^2}
 <p><span class="math notranslate nohighlight">\( | {\Psi}(X_A, X_B) |^2 = | {\Psi}(X_B, X_A) |^2 \)</span></p>
 <p>Кроме того, представим что мы обменяли частицы дважды: A с B и обратно. Никакие физические свойства системы из-за этого измениться не должны. В общем случае, из этого не следует что волновая функция не изменилась – например, так как глобальная фаза волновой функции неизмерима, то мы могли получить <span class="math notranslate nohighlight">\(\Psi' = e^{2 i \pi \theta} \Psi\)</span>.</p>
 <p>Но, если мы работаем больше чем в двух пространственных измерениях, то такой двойной обмен эквивалентен отсутсвию обмена. Для начала представим что мы обмениваем частицы медленно описывая полукруг частицей A вокруг частицы B и потом сдвигая обе частицы. Тогда двойной обмен значит, что частица A описывает полный круг вокруг частицы B. Также, если мы непрерывно изменим ее маршрут не приближая ее к частице B, то мы ожидаем получить тот же результат.</p>
-<p>Итак, какие замкнутые маршруты мы можен получить непрерывно деформируя маршрут в евклидовом пространстве без точки (B)? Ответ для любого измерения больше 2 – <a class="reference external" href="https://en.wikipedia.org/wiki/Homotopy_groups_of_spheres">любые</a>. Следовательно двойной обмен должен давать такой же результат как и если бы мы просто оставили частицу А на месте <span id="id14">[<a class="reference internal" href="../bibliography.html#id11"><span>NSS+08</span></a>]</span>.</p>
+<p>Итак, какие замкнутые маршруты мы можен получить непрерывно деформируя маршрут в евклидовом пространстве без точки (B)? Ответ для любого измерения больше 2 – <a class="reference external" href="https://en.wikipedia.org/wiki/Homotopy_groups_of_spheres">любые</a>. Следовательно двойной обмен должен давать такой же результат как и если бы мы просто оставили частицу А на месте <span id="id14">[<a class="reference internal" href="../bibliography.html#id11">NSS+08</a>]</span>.</p>
 <p>У этого ограничения есть два решения: либо <span class="math notranslate nohighlight">\( {\Psi}(X_A, X_B) = {\Psi}(X_B, X_A) \)</span> (симметричность), либо <span class="math notranslate nohighlight">\( \Psi(X_A, X_B) = -\Psi(X_B, X_A) \)</span> (антисимметричность).
 У антисимметричных функций есть интересное свойство: если функция <span class="math notranslate nohighlight">\(f(x_1, x_2)\)</span> антисимметрична, то <span class="math notranslate nohighlight">\(f(x_1=X, x_2=X)=0\)</span>, то есть антисимметричная функция равна нулю, если ее аргументы одинаковы. В этом легко убедиться на примере <span class="math notranslate nohighlight">\( f = x_1 - x_2 \)</span>.</p>
 <p>Для антисимметричной волновой функции это означает, что две частицы не могут иметь полностью одинаковое состояние – волновая функциия (и вероятность) такой конфигурации равна нулю.</p>
@@ -1014,7 +1018,7 @@ E_{n} = -\frac{1}{n^2} \frac{me^4}{2\hbar^2}
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

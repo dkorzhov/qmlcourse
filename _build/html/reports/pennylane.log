@@ -22,7 +22,7 @@ dev = qml.device('default.qubit', shots=1000, wires=2, analytic=False)
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mDeviceError[0m                               Traceback (most recent call last)
-[0;32m/tmp/ipykernel_2139/1915450117.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_3610/1915450117.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mdev[0m [0;34m=[0m [0mqml[0m[0;34m.[0m[0mdevice[0m[0;34m([0m[0;34m'default.qubit'[0m[0;34m,[0m [0mshots[0m[0;34m=[0m[0;36m1000[0m[0;34m,[0m [0mwires[0m[0;34m=[0m[0;36m2[0m[0;34m,[0m [0manalytic[0m[0;34m=[0m[0;32mFalse[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;32m~/work/qmlcourse/qmlcourse/.venv/lib/python3.8/site-packages/pennylane/__init__.py[0m in [0;36mdevice[0;34m(name, *args, **kwargs)[0m
