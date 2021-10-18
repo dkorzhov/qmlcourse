@@ -27,6 +27,7 @@ notebook_interface: "notebook"
 
 latex:
   latex_engine: "xelatex"
+  use_jupyterbook_latex: true
   latex_documents:
     target.name: qmlcourseRU.tex
 
